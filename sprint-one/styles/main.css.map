@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,EAAE,IAAI,CAAC;EACP,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAEzB;;AAED,AAAA,CAAC;AACD,CAAC,AAAA,QAAQ;AACT,CAAC,AAAA,OAAO,CACR;EACI,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "main.scss",
+        "partials/_variables.scss",
+        "partials/_resets.scss",
+        "partials/_fonts.scss",
+        "partials/_mixins.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
