@@ -2,3 +2,34 @@
 @import "./partials/resets";
 @import "./partials/fonts";
 @import "./partials/mixins";
+@import "./partials/header";
+
+
+.footer {
+    color: white;
+    margin-left: 10px;
+    &__logo {
+        display: none;
+    }
+
+    &__icon{
+        &--margin {
+            margin-right: 20px;
+        }
+    }
+
+    &__heading {
+        padding: 20px 0 0 0;
+    }
+    p {
+        font-weight: lighter;
+    }
+
+    // &__two--bottom {
+    //     padding: 20px 0;
+    // }
+
+    &__three {
+        padding-bottom: 20px;
+    }
+}

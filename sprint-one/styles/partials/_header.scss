@@ -1,0 +1,68 @@
+
+.header {
+    background-color: $lightBlack;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80px;
+    &__first {
+        margin-top: 16px;
+    }
+
+    &__second {
+        padding-top: 10px
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    li {
+       
+        a {
+            width: 160px;
+        &:hover {
+            border-bottom: 4px solid white;
+            padding-bottom: 6px;
+        }
+        &:active {
+            border-bottom: 4px solid white;
+            padding-bottom: 6px;
+        }
+
+      }
+    }
+
+    @include tablet {
+        flex-direction: row;
+        align-items: center;
+        &__first {
+            margin: 0 30px;
+        }
+
+        &__second {
+            padding-top: 0;
+        }
+
+        li {
+            width: auto;
+            margin: 30px;
+
+            a {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    @include desktop {
+        &__first {
+            margin: 0 0 0 180px;
+        }
+        
+        li {
+            margin:0 0 0 56px;
+        }
+    }
+}

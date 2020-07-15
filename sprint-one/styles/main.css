@@ -3,6 +3,8 @@ html, body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: bold;
 }
 
 *,
@@ -10,5 +12,143 @@ html, body {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: #323232;
+}
+
+@font-face {
+  font-family: 'AvenirNext LT Pro';
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext LT Pro1';
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext LT Pro';
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.header {
+  background-color: #323232;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 80px;
+}
+
+.header__first {
+  margin-top: 16px;
+}
+
+.header__second {
+  padding-top: 10px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header li a {
+  width: 160px;
+}
+
+.header li a:hover {
+  border-bottom: 4px solid white;
+  padding-bottom: 6px;
+}
+
+.header li a:active {
+  border-bottom: 4px solid white;
+  padding-bottom: 6px;
+}
+
+@media screen and (min-width: 720px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__first {
+    margin: 0 30px;
+  }
+  .header__second {
+    padding-top: 0;
+  }
+  .header li {
+    width: auto;
+    margin: 30px;
+  }
+  .header li a {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .header__first {
+    margin: 0 0 0 180px;
+  }
+  .header li {
+    margin: 0 0 0 56px;
+  }
+}
+
+.footer {
+  color: white;
+  margin-left: 10px;
+}
+
+.footer__logo {
+  display: none;
+}
+
+.footer__icon--margin {
+  margin-right: 20px;
+}
+
+.footer__heading {
+  padding: 20px 0 0 0;
+}
+
+.footer p {
+  font-weight: lighter;
+}
+
+.footer__three {
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */
