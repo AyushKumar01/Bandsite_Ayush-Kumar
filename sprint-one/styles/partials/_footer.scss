@@ -1,0 +1,123 @@
+
+.footer {
+    @include mobileText;
+    color: white;
+    margin-left: 10px;
+    &__logo {
+        display: none;
+    }
+
+    &__icon{
+        &--margin {
+            margin-right: 1rem;
+            // margin-bottom: 1rem;
+        }
+    }
+
+    &__heading {
+        padding: 1.5rem 0 1rem 0;
+    }
+    p {
+        font-weight: lighter;
+    }
+
+    // &__two--bottom {
+    //     padding: 20px 0;
+    // }
+
+    &__three {
+        padding-bottom: 20px;
+        max-width: 255px;
+
+    }
+
+    @include tablet {
+        @include tabletText;
+        margin: 1rem 1.5rem;
+
+        &__one {
+            display: flex;
+            // justify-content: space-evenly; 
+            align-items: baseline;  
+            // position: relative;  
+            justify-content: space-between;   
+        }
+
+        &__heading {
+            // padding: 2rem 2rem 0 0;
+        }
+
+        &__icon {
+            padding-right: 4rem;
+            // padding-right: 10rem;
+        }
+
+        &__logo {
+            display: unset;
+            // position: absolute;
+            // right: 0;
+            // top: 4.2rem;
+        }
+
+        &__two {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__three {
+            max-width: unset
+        }
+    }
+
+    @include desktop {
+        @include tabletText;
+        margin: auto 180px;
+
+        &__one {
+            display: flex;
+            justify-content: space-between; 
+            align-items: baseline; 
+            // position: relative; 
+            // margin-bottom: 1rem;     
+        }
+
+        &__heading {
+            // padding:;
+            &--margin {
+                margin: 0;
+            }
+        }
+
+        &__icon {
+            // padding-left: 2rem;
+            margin-right: 25rem;
+
+            &--margin {
+               margin-right: 2rem;
+            }
+        }
+
+        &__logo {
+            // position: absolute;
+            // right: 0;
+            // top: 3rem;
+        }
+
+        &__two {
+            display: flex;
+            justify-content: flex-start;
+           
+        }
+        &__tow-left {
+            padding-right: 5rem;
+        }
+
+        &__tow-mid {
+            padding-right: 5rem;
+        }
+
+        // &__three {
+        //     max-width: unset
+        // }
+    }
+}

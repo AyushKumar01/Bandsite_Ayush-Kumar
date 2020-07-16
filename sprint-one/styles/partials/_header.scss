@@ -1,5 +1,6 @@
 
 .header {
+    @include mobileText;
     background-color: $lightBlack;
     color: white;
     display: flex;
@@ -20,9 +21,9 @@
     }
 
     li {
-       
-        a {
-            width: 160px;
+       width: 50%;
+        // a {
+        //     width: 160px;
         &:hover {
             border-bottom: 4px solid white;
             padding-bottom: 6px;
@@ -33,7 +34,7 @@
         }
 
       }
-    }
+    // }
 
     @include tablet {
         flex-direction: row;
@@ -49,9 +50,18 @@
         li {
             width: auto;
             margin: 30px;
+            // padding-bottom: 2rem;
 
-            a {
-                padding-bottom: 30px;
+            // a {
+            //     padding-bottom: 30px;
+            // }
+            &:hover {
+                border-bottom: 4px solid white;
+                padding-bottom: 25px;
+            }
+            &:active {
+                border-bottom: 4px solid white;
+                padding-bottom: 6px;
             }
         }
     }

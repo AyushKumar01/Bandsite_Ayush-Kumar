@@ -10,3 +10,65 @@
     }
   }
   
+  @mixin mobileText {
+      h1 {
+          font-size: 24px;
+          line-height: 32px;
+      }
+      
+      h2 {
+          font-size: 14px;
+          line-height: 22px;
+      }
+      
+      h4 {
+          font-size: 13px;
+          line-height: 18px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 18px;
+      }
+      
+      h5 {
+          font-size: 12px;
+          line-height: 20px;
+      }
+  }
+
+  @mixin tabletText {
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    h5 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+
+@mixin heroText {
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+  }
+  
+}
