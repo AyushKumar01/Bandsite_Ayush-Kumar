@@ -4,9 +4,9 @@
     background-color: $lightBlack;
     color: white;
     display: flex;
+    height: 80px;
     flex-direction: column;
     text-align: center;
-    height: 80px;
     &__first {
         margin-top: 16px;
     }
@@ -20,18 +20,21 @@
         justify-content: space-evenly;
     }
 
+   
+
     li {
        width: 50%;
         // a {
         //     width: 160px;
-        &:hover {
-            border-bottom: 4px solid white;
-            padding-bottom: 6px;
-        }
+        // &:hover {
+        //     border-bottom: 4px solid white;
+        //     padding-bottom: 6px;
+        // }
         &:active {
             border-bottom: 4px solid white;
             padding-bottom: 6px;
         }
+      
 
       }
     // }
@@ -55,9 +58,9 @@
             // a {
             //     padding-bottom: 30px;
             // }
-            &:hover {
-                border-bottom: 4px solid white;
-                padding-bottom: 25px;
+            // &:hover {
+            //     border-bottom: 4px solid white;
+            //     padding-bottom: 25px;
             }
             &:active {
                 border-bottom: 4px solid white;

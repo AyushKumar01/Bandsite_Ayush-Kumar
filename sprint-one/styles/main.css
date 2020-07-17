@@ -54,12 +54,12 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 80px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  height: 80px;
 }
 
 .header h1 {
@@ -106,11 +106,6 @@ footer {
 
 .header li {
   width: 50%;
-}
-
-.header li:hover {
-  border-bottom: 4px solid white;
-  padding-bottom: 6px;
 }
 
 .header li:active {
@@ -210,7 +205,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   .footer {
-    margin: 1rem 1.5rem;
+    margin: 1.5rem 1.5rem 0;
   }
   .footer h1 {
     font-size: 36px;
@@ -299,6 +294,7 @@ footer {
   }
   .footer__heading--margin {
     margin: 0;
+    padding: 3rem 0 3.5rem 0;
   }
   .footer__icon {
     margin-right: 25rem;
@@ -354,6 +350,7 @@ footer {
   }
   .hero__image-heading {
     min-width: 500px;
+    margin-left: 24px;
   }
 }
 
@@ -368,6 +365,7 @@ footer {
   }
   .hero__image-heading {
     min-width: 500px;
+    margin-left: 180px;
   }
 }
 
@@ -401,8 +399,12 @@ footer {
   line-height: 20px;
 }
 
+.main__heading {
+  margin: 2rem 0 1.5rem 1rem;
+}
+
 .main .about {
-  margin: auto 16px;
+  margin: auto 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,11 +419,11 @@ footer {
 }
 
 .main .about__artist {
-  margin: 2rem 0 2.5rem 0;
+  margin: 0 0 2.5rem 0;
 }
 
-.main .about__heading {
-  margin: 2rem 0 1.5rem 0;
+.main .about__both-artist {
+  margin: 0 0 0.7rem 0;
 }
 
 .main .about__image {
@@ -434,28 +436,31 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .main .about {
-    margin: auto 24px;
-  }
-  .main .about h1 {
+  .main h1 {
     font-size: 36px;
     line-height: 44px;
   }
-  .main .about h2 {
+  .main h2 {
     font-size: 24px;
     line-height: 32px;
   }
-  .main .about h3 {
+  .main h3 {
     font-size: 16px;
     line-height: 24px;
   }
-  .main .about h4 {
+  .main h4 {
     font-size: 14px;
     line-height: 22px;
   }
-  .main .about h5 {
+  .main h5 {
     font-size: 12px;
     line-height: 20px;
+  }
+  .main__heading {
+    margin: 2rem 0 1.5rem 1.5rem;
+  }
+  .main .about {
+    margin: auto 1.5rem;
   }
   .main .about__image {
     width: 100%;
@@ -466,6 +471,54 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
+  .main .about__para-two {
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .main h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .main h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .main h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .main h5 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main__heading {
+    margin: 3rem 0 3rem 11.25rem;
+  }
+  .main .about {
+    margin: auto 17rem;
+  }
+  .main .about__image {
+    width: 100%;
+    height: 28.13rem;
+  }
+  .main .about__quote {
+    margin: 3rem 0 2.5rem 0;
+  }
+  .main .about__artist {
+    margin: 0 0 3.5rem 0;
+  }
+  .main .about__both-artist {
+    margin: 0 0 1.2rem 0;
+  }
+  .main .about__para-one {
+    margin-bottom: 3rem;
+  }
 }
 
 .main .gallery {
@@ -474,7 +527,7 @@ footer {
 }
 
 .main .gallery__album {
-  margin: auto 16px;
+  margin: 0 16px 24px;
 }
 
 .main .gallery__photos {
@@ -500,29 +553,75 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .main .gallery h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .main .gallery h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .main .gallery h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .main .gallery h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .main .gallery h5 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main .gallery__album {
+    margin: 0;
+  }
   .main .gallery__photos {
+    margin: auto 1.5rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-line-pack: space-evenly;
-        align-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .main .gallery__photos-size {
     width: 224px;
     height: 126px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .main .gallery__heading {
+    margin-left: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .main .gallery {
-    margin: auto 180px;
+  .main .gallery h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .main .gallery h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .main .gallery h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .main .gallery h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .main .gallery h5 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main .gallery__heading {
+    margin-left: 11.25rem;
+    padding: 3rem 0 4rem;
   }
   .main .gallery__photos {
     -webkit-box-orient: horizontal;
@@ -531,16 +630,15 @@ footer {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-line-pack: space-evenly;
-        align-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 11.25rem 1rem;
   }
   .main .gallery__photos-size {
-    width: 330px;
-    height: 193px;
-    margin-bottom: 1rem;
+    width: 21.5rem;
+    height: 12.06rem;
+    margin-bottom: 1.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
