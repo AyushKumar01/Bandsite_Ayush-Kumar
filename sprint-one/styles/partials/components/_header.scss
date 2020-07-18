@@ -12,15 +12,6 @@
         cursor: pointer;
     }
 
-    &__second {
-        // padding-top: 10px
-    }
-
-    // li:active {
-       
-    // }
-
-
     &__list {
         display: flex;
         justify-content: space-around;
@@ -41,9 +32,6 @@
             border-bottom: 5px solid white;
         }
     }
-   
-    
-        //line-height: 24px;
       
 
 // =====================
@@ -67,43 +55,9 @@
                 padding: 0px 5px;
                 margin: 0 20px;
             }
-
-
-            // display: flex;
-            // justify-content: space-around;
-            // line-height: 35px;
-
-            // &-width {
-            //     width: 50%;
-            //     &:active {
-            //         border-bottom: 5px solid white;
-            //     }
-            // }
-
-            // &-active{
-            //     border-bottom: 5px solid white;
-            // }
         }
 
-
-
-        // li {
-        //     width: auto;
-        //     margin: 30px;
-        //     }
-            // &:active {
-            //     border-bottom: 4px solid white;
-            //     padding-bottom: 6px;
-            // }
     }
-       // padding-bottom: 2rem;
-
-            // a {
-            //     padding-bottom: 30px;
-            // }
-            // &:hover {
-            //     border-bottom: 4px solid white;
-            //     padding-bottom: 25px;
 
     @include desktop {
         &__first {

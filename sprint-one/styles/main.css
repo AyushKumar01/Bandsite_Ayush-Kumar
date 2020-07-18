@@ -474,6 +474,11 @@ footer {
           flex-direction: column;
 }
 
+.main .about__image {
+  width: 100%;
+  height: 183px;
+}
+
 .main .about__quote {
   margin: 1.5rem 0 2rem 0;
 }
@@ -486,17 +491,12 @@ footer {
   margin: 0;
 }
 
-.main .about__image {
-  width: 100%;
-  height: 183px;
+.main .about__para-one {
+  margin: 1.5rem 0;
 }
 
 .main .about__bottom {
   margin-bottom: 2.5rem;
-}
-
-.main .about__para-one {
-  margin: 24px 0;
 }
 
 @media screen and (min-width: 768px) {

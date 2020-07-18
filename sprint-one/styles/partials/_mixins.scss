@@ -64,38 +64,39 @@
     }
 }
 
-@mixin tabParaFont {
-  font-size: 14px;
-  line-height: 22px;
-}
-
-@mixin tabContactFont {
-
-     p {
-       font-size: 14px;
-       line-height: 20px;
-     }
-}
-
-
-
-@mixin heroText {
-  h1 {
-    font-size: 60px;
-    line-height: 68px;
+  @mixin tabParaFont {
+    font-size: 14px;
+    line-height: 22px;
   }
-  
-}
 
-@mixin footerTwoMrg {
-  padding-right: 5rem;
+  @mixin tabContactFont {
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+  }
+
+
+
+  @mixin heroText {
+    h1 {
+      font-size: 60px;
+      line-height: 68px;
+    }
     
-  &--headings {
-      margin: 0 0 1.5rem 0;
   }
 
-  &--para {
-    margin: 1.5rem 0 0 0;
-  }
-} 
+  @mixin footerTwoMrg {
+      padding-right: 5rem;
+        
+      &--headings {
+          margin: 0 0 1.5rem 0;
+      }
+
+      &--para {
+        margin: 1.5rem 0 0 0;
+      }
+      
+  } 
   
