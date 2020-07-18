@@ -6,6 +6,7 @@
     
     p {
         font-weight: lighter;
+        @include tabContactFont;
     }
     
     &__logo {
@@ -25,6 +26,10 @@
     &__three {
         padding-bottom: 20px;
         max-width: 220px;
+        &-font {
+            font-size: 14px;
+            line-height: 22px;
+        }
 
     }
 
@@ -47,14 +52,13 @@
         }
 
         &__two {
-            @include tabContactFont;
             display: flex;
             justify-content: space-between;
         }
 
         &__three {
-            @include tabContactFont;
             max-width: unset
+            
         }
     }
 
@@ -90,6 +94,7 @@
             
             &-left {
               @include footerTwoMrg;
+             
             }
 
             &-mid {

@@ -24,6 +24,12 @@ footer {
   background-color: #323232;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: 'AvenirNext LT Pro';
   src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
@@ -89,7 +95,6 @@ footer {
 
 .header__first {
   margin-top: 16px;
-  cursor: pointer;
 }
 
 .header__list {
@@ -101,15 +106,16 @@ footer {
   line-height: 35px;
 }
 
-.header__list-width {
+.header__list-element {
   width: 50%;
 }
 
-.header__list-width:active {
+.header__list-element:active {
   border-bottom: 5px solid white;
 }
 
-.header__list-width a {
+.header__list-element:hover {
+  background-color: #645e5e;
   cursor: pointer;
 }
 
@@ -154,12 +160,12 @@ footer {
     padding-top: 10px;
   }
   .header__list {
-    line-height: 65px;
+    line-height: 75px;
   }
-  .header__list-width {
+  .header__list-element {
     width: auto;
     padding: 0px 5px;
-    margin: 0 20px;
+    margin: 0 20px 10px;
   }
 }
 
@@ -167,8 +173,11 @@ footer {
   .header__first {
     margin: 0 0 0 180px;
   }
-  .header li {
-    margin: 0 0 0 56px;
+  .header__list {
+    line-height: 75px;
+  }
+  .header__list-element {
+    margin: 0 0 10px 56px;
   }
 }
 
@@ -255,6 +264,8 @@ footer {
 
 .footer p {
   font-weight: lighter;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .footer__logo {
@@ -272,6 +283,11 @@ footer {
 .footer__three {
   padding-bottom: 20px;
   max-width: 220px;
+}
+
+.footer__three-font {
+  font-size: 14px;
+  line-height: 22px;
 }
 
 @media screen and (min-width: 768px) {
@@ -323,16 +339,8 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer__two p {
-    font-size: 14px;
-    line-height: 20px;
-  }
   .footer__three {
     max-width: unset;
-  }
-  .footer__three p {
-    font-size: 14px;
-    line-height: 20px;
   }
 }
 
@@ -619,6 +627,13 @@ footer {
   width: 100%;
   height: 183px;
   margin-bottom: 1rem;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.main .gallery__photos-size:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .main .gallery__heading {
@@ -649,29 +664,22 @@ footer {
     line-height: 20px;
   }
   .main .gallery__album {
-    margin: 0;
+    margin: 0 1.5rem;
   }
-  .main .gallery__photos {
-    margin: auto 1.5rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+  .main .gallery__photos-item {
+    height: 126px;
+    float: left;
+    margin-right: 3.33%;
+    margin-bottom: 3.33%;
+    width: 31.11333%;
+  }
+  .main .gallery__photos-item:nth-child(3n) {
+    margin-right: 0;
   }
   .main .gallery__photos-size {
-    width: 224px;
+    width: 100%;
     height: 126px;
-    margin-bottom: 1.5rem;
-  }
-  .main .gallery__heading {
-    margin-left: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -696,17 +704,23 @@ footer {
     font-size: 12px;
     line-height: 20px;
   }
-  .main .gallery__heading {
-    margin-left: 11.25rem;
-    padding: 3rem 0 4rem;
+  .main .gallery__album {
+    margin: 0 11.25rem;
   }
-  .main .gallery__photos {
-    margin: 0 11.25rem 0;
+  .main .gallery__photos-item {
+    float: left;
+    margin-right: 2.22%;
+    margin-bottom: 2.22%;
+    width: 31.85333%;
+    height: 193px;
+  }
+  .main .gallery__photos-item:nth-child(3n) {
+    margin-right: 0;
   }
   .main .gallery__photos-size {
-    width: 21.5rem;
-    height: 12.06rem;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 193px;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

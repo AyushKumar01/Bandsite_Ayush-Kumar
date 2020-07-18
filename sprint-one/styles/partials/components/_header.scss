@@ -9,7 +9,6 @@
     text-align: center;
     &__first {
         margin-top: 16px;
-        cursor: pointer;
     }
 
     &__list {
@@ -18,12 +17,13 @@
         line-height: 35px;
         
 
-        &-width {
+        &-element {
             width: 50%;
             &:active {
                 border-bottom: 5px solid white;
             }
-            a {
+            &:hover {
+                background-color: $brightBlack;
                 cursor: pointer;
             }
         }
@@ -34,7 +34,7 @@
     }
       
 
-// =====================
+// ==========breakpoint===========
     @include tablet {
         @include tabletText;
         flex-direction: row;
@@ -49,11 +49,11 @@
 
             
         &__list {
-            line-height: 65px;
-            &-width {
+            line-height: 75px;
+            &-element {
                 width: auto;
                 padding: 0px 5px;
-                margin: 0 20px;
+                margin: 0 20px 10px;
             }
         }
 
@@ -63,10 +63,16 @@
         &__first {
             margin: 0 0 0 180px;
         }
-        
-        li {
-            margin:0 0 0 56px;
+
+        &__list {
+            line-height: 75px;
+
+            &-element {
+                margin:0 0 10px 56px;
+    
+            }
 
         }
+        
     }
 }

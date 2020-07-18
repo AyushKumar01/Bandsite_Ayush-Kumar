@@ -14,8 +14,8 @@
             </div>
             <nav class="header__second">
                 <ul class="header__list">
-                    <li class="header__list-width header__list-active"><a>Biography</a></li>
-                    <li class="header__list-width"><a>Shows</a></li>
+                    <li class="header__list-element header__list-active"><a>Biography</a></li>
+                    <li class="header__list-element"><a>Shows</a></li>
                 </ul>
             </nav>
         </div>      
@@ -70,24 +70,25 @@
                     </p>
             </div>
         </section>
+        <!-- gallery with grid and sass, net ninja reference -->
         <section class="gallery">
             <div class="gallery__album">
-                <!-- <div class="gallery__content"> -->
-                    <h1  class="gallery__heading">Photo Gallery</h1>
-                    <div class="gallery__photos">
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-1.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-2.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-3.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-4.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-5.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-6.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-7.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-8.jpg" />
-                        <img class="gallery__photos-size" src="./assets/images/photo-gallery-9.jpg" />
-                    </div>
-                <!-- </div> -->
+                <h1 class="gallery__heading">Photo Gallery</h1>
+                <div class="gallery__photos">
+                    <ul>    
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-1.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-2.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-3.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-4.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-5.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-6.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-7.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-8.jpg" /></li>
+                        <li class="gallery__photos-item"><img  class="gallery__photos-size" src="./assets/images/photo-gallery-9.jpg" /></li>
+                    </ul>
+                </div>
             </div>
-        </section> 
+        </section>
     </main>
     <footer>
         <div class="footer">
@@ -101,28 +102,28 @@
                     <img  class="footer__icon--margin" src="assets/icons/png/Icon-twitter.png"/>
                 </div>
                 <div class="footer__logo">
-                    <img class="footer__logo-size" src="assets/logo/logo-bandsite.png"/>
+                   <a><img class="footer__logo-size" src="assets/logo/logo-bandsite.png"/></a>
                 </div>
             </div>
             <div class="footer__two">
                 <div class="footer__two-left" >
                     <h4 class="footer__two-left--headings">Richard Rovner <br>The Bees Knees Management</h4>
-                    <p>460 King Street West<br>Toronto, Ontario M5V 1L7</p>
+                    <p class="footer__two-left--para">460 King Street West<br>Toronto, Ontario M5V 1L7</p>
                     <p class="footer__two-left--para"><a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
                 </div>
                 <div class="footer__two-mid">
                     <h4 class="footer__two-mid--headings">Marsha Vlasic<br>Artist Group International </h4>
                     <p>Booking Agent for<br>US / South America / Japan</p>
-                    <p class="footer__two-mid--para">marsha.vlasic@artistgrp.com</p>
+                    <p class="footer__two-mid--para"><a href="mailto:marsha.vlasic@artistgrp.com">marsha.vlasic@artistgrp.com</a></p>
                 </div>
                 <div class="footer__two-right">
                     <h4 class="footer__two-right--headings">Russel Warby<br>William Morrir Entertainment</h4>
                     <p>Booking Agent for<br/>UK / EU / AU</p>
-                    <p class="footer__two-right--para">RLW@wmeentertainment.com</p>
+                    <p class="footer__two-right--para"><a href="mailto:RLW@wmeentertainment.com">RLW@wmeentertainment.com</a></p>
                 </div>
             </div>
             <div class="footer__three">
-                <p>Copyright The Bees Knees © 2018 All Rights Reserved</p>
+                <p class="footer__three-font">Copyright The Bees Knees © 2018 All Rights Reserved</p>
             </div>
         </div>
     </footer>

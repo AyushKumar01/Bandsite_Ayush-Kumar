@@ -17,7 +17,7 @@
         margin: 2rem 0 1.5rem 1rem;
     }
 
-    //  ============about-the-musicians==========   
+    //  ============about-the-musicians-start==========   
     .about {
         margin: auto 1rem;
         display: flex;
@@ -51,80 +51,81 @@
     }
 
 
-    @include tablet {
-        @include tabletText;
-        &__heading {
-            margin: 2rem 0 1.5rem 1.5rem;
-        }
-        .about {
-            margin: auto 1.5rem;
-
-            &__image {
-                width: 100%;
-                height: 362px;
+        @include tablet {
+            @include tabletText;
+            &__heading {
+                margin: 2rem 0 1.5rem 1.5rem;
             }
+            .about {
+                margin: auto 1.5rem;
 
-            &__para {
-                display: flex;
-
-                &-one {
-                    @include tabParaFont;
+                &__image {
+                    width: 100%;
+                    height: 362px;
                 }
 
-                &-two {
-                    margin: 1.5rem 0 1.5rem 1.5rem;
-                    @include tabParaFont;
+                &__para {
+                    display: flex;
+
+                    &-one {
+                        @include tabParaFont;
+                    }
+
+                    &-two {
+                        margin: 1.5rem 0 1.5rem 1.5rem;
+                        @include tabParaFont;
+                    }
+
+
                 }
 
-
             }
-
-        }
-    }    
+        }    
      
-    @include desktop {
-        @include tabletText;
+        @include desktop {
+            @include tabletText;
 
-        &__heading {
-            margin: 3rem 0 3rem 11.25rem;
-        }
-        
-        .about {
-             margin: auto 17rem;
-
-            &__image {
-                width: 100%;
-                height: 28.13rem;
+            &__heading {
+                margin: 3rem 0 3rem 11.25rem;
             }
+            
+                .about {
+                    margin: auto 17rem;
 
-            &__quote {
-                margin: 3rem 0 2.5rem 0;
-            }
+                    &__image {
+                        width: 100%;
+                        height: 28.13rem;
+                    }
 
-            &__artist {
-                margin: 0 0 3.5rem 0;
-            }
+                    &__quote {
+                        margin: 3rem 0 2.5rem 0;
+                    }
 
-            &__para {
-                &-one {
-                    margin:2rem 20px 3rem 0;
-                    @include tabParaFont;
+                    &__artist {
+                        margin: 0 0 3.5rem 0;
+                    }
+
+                    &__para {
+                        &-one {
+                            margin:2rem 20px 3rem 0;
+                            @include tabParaFont;
+                        }
+
+                        &-two {
+                            margin:2rem 0 3rem 20px;
+                            @include tabParaFont;
+                        }
+
+                    }
+
                 }
 
-                &-two {
-                    margin:2rem 0 3rem 20px;
-                    @include tabParaFont;
-                }
-
             }
-
-        }
-
-    }
-        
+     //  ============about-the-musicians-end==========    
 
     
-    //  ============photo-gallery-start===========
+
+    // ================gallery-start-with-help-grid-and-sass============
 
     .gallery {
         background-color: $offWhite;
@@ -143,6 +144,10 @@
                 width: 100%;
                 height: 183px;
                 margin-bottom: 1rem;
+                filter: grayscale(50%);
+                &:hover {
+                    filter: grayscale(0);
+                }
             }
 
         }
@@ -153,56 +158,55 @@
             padding: 2rem 0 1.5rem 0;
         }
 
-        @include tablet {
-            @include tabletText;
+                @include tablet {
+                    @include tabletText;
 
-            &__album {
-                margin: 0;
-            }
-
-            &__photos {
-                margin: auto 1.5rem;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-content: space-between;
-            
-                    &-size{
-                        width: 224px;
-                        height: 126px;
-                        margin-bottom: 1.5rem;
-                        }
-
-            }
-
-            &__heading {
-                margin-left: 1.5rem; 
-            }
-
-        }
-
-            @include desktop {
-                @include tabletText;
-                &__heading {
-                    margin-left: 11.25rem;
-                    padding: 3rem 0 4rem;
+                    &__album {
+                        margin: 0 1.5rem ;
                     }
 
-                &__photos {
-                    margin: 0 11.25rem 0;
-            
-                    &-size{
-                        width: 21.5rem;
-                        height: 12.06rem;
-                        margin-bottom: 1.5rem;
+                    &__photos {
+
+                        &-item {
+                            height: 126px;
+                            @include grid(3, 3.33%);
                         }
+                        &-size {
+                            width: 100%;
+                            height: 126px;
+                            margin-bottom: 0;
+                        }
+                    }
 
-                }
+                }    
 
-            }
+                    @include desktop {
+                        @include tabletText;
+                      
+                        &__album {
+                            margin: 0 11.25rem ;
+                        }
+    
+                        &__photos {
+    
+                            &-item {
+                                @include grid(3, 2.22%);
+                                height: 193px;
+                            }
+                            &-size {
+                                width: 100%;
+                                height: 193px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }    
+        
+                    
+                
 
     }
+    
+    
 
-} 
-
-
+            //   ===============close-for-main=====================
+}
