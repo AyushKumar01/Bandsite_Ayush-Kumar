@@ -1,0 +1,118 @@
+
+.header {
+    @include mobileText;
+    background-color: $lightBlack;
+    color: white;
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    text-align: center;
+    &__first {
+        margin-top: 16px;
+        cursor: pointer;
+    }
+
+    &__second {
+        // padding-top: 10px
+    }
+
+    // li:active {
+       
+    // }
+
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        line-height: 35px;
+        
+
+        &-width {
+            width: 50%;
+            &:active {
+                border-bottom: 5px solid white;
+            }
+            a {
+                cursor: pointer;
+            }
+        }
+
+        &-active{
+            border-bottom: 5px solid white;
+        }
+    }
+   
+    
+        //line-height: 24px;
+      
+
+// =====================
+    @include tablet {
+        @include tabletText;
+        flex-direction: row;
+        align-items: center;
+        &__first {
+            margin: 0 24px;
+        }
+
+        &__second {
+            padding-top: 10px;
+        }
+
+            
+        &__list {
+            line-height: 65px;
+            &-width {
+                width: auto;
+                padding: 0px 5px;
+                margin: 0 20px;
+            }
+
+
+            // display: flex;
+            // justify-content: space-around;
+            // line-height: 35px;
+
+            // &-width {
+            //     width: 50%;
+            //     &:active {
+            //         border-bottom: 5px solid white;
+            //     }
+            // }
+
+            // &-active{
+            //     border-bottom: 5px solid white;
+            // }
+        }
+
+
+
+        // li {
+        //     width: auto;
+        //     margin: 30px;
+        //     }
+            // &:active {
+            //     border-bottom: 4px solid white;
+            //     padding-bottom: 6px;
+            // }
+    }
+       // padding-bottom: 2rem;
+
+            // a {
+            //     padding-bottom: 30px;
+            // }
+            // &:hover {
+            //     border-bottom: 4px solid white;
+            //     padding-bottom: 25px;
+
+    @include desktop {
+        &__first {
+            margin: 0 0 0 180px;
+        }
+        
+        li {
+            margin:0 0 0 56px;
+
+        }
+    }
+}

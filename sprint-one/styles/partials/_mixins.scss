@@ -64,6 +64,20 @@
     }
 }
 
+@mixin tabParaFont {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin tabContactFont {
+
+     p {
+       font-size: 14px;
+       line-height: 20px;
+     }
+}
+
+
 
 @mixin heroText {
   h1 {
@@ -72,3 +86,16 @@
   }
   
 }
+
+@mixin footerTwoMrg {
+  padding-right: 5rem;
+    
+  &--headings {
+      margin: 0 0 1.5rem 0;
+  }
+
+  &--para {
+    margin: 1.5rem 0 0 0;
+  }
+} 
+  

@@ -2,12 +2,12 @@
 @import "./partials/resets";
 @import "./partials/fonts";
 @import "./partials/mixins";
-@import "./partials/header";
-@import "./partials/footer";
-@import "./partials/hero";
+@import "./partials/components/header";
+@import "./partials/components/hero";
+@import "./partials/components/footer";
 
 
-// ===========main-start=================
+// ===========main-start=========================
 .main {
     @include mobileText;
     font-weight: normal;
@@ -17,7 +17,7 @@
         margin: 2rem 0 1.5rem 1rem;
     }
 
-        
+    //  ============about-the-musicians==========   
     .about {
         margin: auto 1rem;
         display: flex;
@@ -32,7 +32,7 @@
         }
 
         &__both-artist {
-            margin: 0 0 0.7rem 0;
+            margin: 0;
         }
 
         &__image {
@@ -42,6 +42,10 @@
 
         &__bottom {
             margin-bottom: 2.5rem;
+        }
+
+        &__para-one {
+            margin: 24px 0;
         }
     }
 
@@ -61,14 +65,18 @@
 
             &__para {
                 display: flex;
+                // font-size: 14px;
+                // line-height: 22px;
 
-                // &-one {
-                //     margin-right: 12px;
-                // }
+                &-one {
+                    @include tabParaFont;
+                }
 
                 &-two {
-                    margin-left: 1.5rem;
+                    margin: 1.5rem 0 1.5rem 1.5rem;
+                    @include tabParaFont;
                 }
+
 
             }
 
@@ -99,12 +107,19 @@
             }
 
             &__both-artist {
-                margin: 0 0 1.2rem 0;
+                // margin: 0 0 1.2rem 0;
             }
 
             &__para {
+                // @include tabParaFont;
                 &-one {
-                    margin-bottom: 3rem;
+                    margin:2rem 20px 3rem 0;
+                    @include tabParaFont;
+                }
+
+                &-two {
+                    margin:2rem 0 3rem 20px;
+                    @include tabParaFont;
                 }
 
             }
@@ -115,19 +130,20 @@
         
 
     
-//    ============photo-gallery-start==================
+    //  ============photo-gallery-start===========
 
     .gallery {
         background-color: $offWhite;
         font-weight: bold;
 
         &__album {
-            margin: 0 16px 24px ;
+            margin: 0 1rem 0;
         }
 
         &__photos {
             display: flex;
             flex-direction: column;
+            padding-bottom: 1rem;
 
             &-size{
                 width: 100%;
@@ -151,23 +167,22 @@
             }
 
             &__photos {
-            margin: auto 1.5rem;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            //    align-content: space-between;
-        
-                &-size{
-                    width: 224px;
-                    height: 126px;
-                    margin-bottom: 1.5rem;
-                    }
+                margin: auto 1.5rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: space-between;
+            
+                    &-size{
+                        width: 224px;
+                        height: 126px;
+                        margin-bottom: 1.5rem;
+                        }
 
             }
 
             &__heading {
-            margin-left: 1.5rem;
-                
+                margin-left: 1.5rem; 
             }
 
         }
@@ -180,24 +195,18 @@
                     }
 
                 &__photos {
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    margin: 0 11.25rem 1rem;
-                    
-                    
+                    margin: 0 11.25rem 0;
             
                     &-size{
-                        // width: 344px;
                         width: 21.5rem;
-                        // height: 193px;
                         height: 12.06rem;
                         margin-bottom: 1.5rem;
                         }
 
+                }
+
             }
 
-        }
     }
 
 } 
