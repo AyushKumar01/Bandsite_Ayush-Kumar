@@ -121,11 +121,10 @@
                 }
 
             }
-     //  ============about-the-musicians-end==========    
-
-    
-
-    // ================gallery-start-with-help-grid-and-sass============
+     //  ============about-the-musicians-end==========   
+     
+     
+     //  ============photo-gallery-start-with-help-of-flex-box===========
 
     .gallery {
         background-color: $offWhite;
@@ -158,54 +157,58 @@
             padding: 2rem 0 1.5rem 0;
         }
 
-                @include tablet {
-                    @include tabletText;
+        @include tablet {
+            @include tabletText;
 
-                    &__album {
-                        margin: 0 1.5rem ;
+            &__album {
+                margin: 0;
+            }
+
+            &__photos {
+                margin: auto 1.5rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: space-between;
+            
+                    &-size{
+                        width: 224px;
+                        height: 126px;
+                        margin-bottom: 1.5rem;
+                        }
+
+            }
+
+            &__heading {
+            margin-left: 1.5rem; 
+            }
+
+        }
+
+            @include desktop {
+                @include tabletText;
+                &__heading {
+                    margin-left: 11.25rem;
+                    padding: 3rem 0 4rem;
                     }
 
-                    &__photos {
+                &__photos {
+                    margin: 0 11.25rem 0;
+            
+                    &-size{
+                        width: 21.5rem;
+                        height: 12.06rem;
+                        margin-bottom: 1.5rem;
+                        }
 
-                        &-item {
-                            height: 126px;
-                            @include grid(3, 3.33%);
-                        }
-                        &-size {
-                            width: 100%;
-                            height: 126px;
-                            margin-bottom: 0;
-                        }
-                    }
+                }
 
-                }    
-
-                    @include desktop {
-                        @include tabletText;
-                      
-                        &__album {
-                            margin: 0 11.25rem ;
-                        }
-    
-                        &__photos {
-    
-                            &-item {
-                                @include grid(3, 2.22%);
-                                height: 193px;
-                            }
-                            &-size {
-                                width: 100%;
-                                height: 193px;
-                                margin-bottom: 0;
-                            }
-                        }
-                    }    
-        
-                    
-                
+            }
 
     }
+
     
+
     
 
             //   ===============close-for-main=====================
