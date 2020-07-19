@@ -485,6 +485,7 @@ a {
 .main .about__image {
   width: 100%;
   height: 183px;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .main .about__quote {
@@ -627,13 +628,12 @@ a {
   width: 100%;
   height: 183px;
   margin-bottom: 1rem;
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .main .gallery__photos-size:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
 }
 
 .main .gallery__heading {
@@ -664,29 +664,22 @@ a {
     line-height: 20px;
   }
   .main .gallery__album {
-    margin: 0;
+    margin: 0 1.5rem;
   }
-  .main .gallery__photos {
-    margin: auto 1.5rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+  .main .gallery__photos-item {
+    height: 126px;
+    float: left;
+    margin-right: 3.33%;
+    margin-bottom: 3.33%;
+    width: 31.11333%;
+  }
+  .main .gallery__photos-item:nth-child(3n) {
+    margin-right: 0;
   }
   .main .gallery__photos-size {
-    width: 224px;
+    width: 100%;
     height: 126px;
-    margin-bottom: 1.5rem;
-  }
-  .main .gallery__heading {
-    margin-left: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -711,17 +704,23 @@ a {
     font-size: 12px;
     line-height: 20px;
   }
-  .main .gallery__heading {
-    margin-left: 11.25rem;
-    padding: 3rem 0 4rem;
+  .main .gallery__album {
+    margin: 0 11.25rem;
   }
-  .main .gallery__photos {
-    margin: 0 11.25rem 0;
+  .main .gallery__photos-item {
+    float: left;
+    margin-right: 2.22%;
+    margin-bottom: 2.22%;
+    width: 31.85333%;
+    height: 193px;
+  }
+  .main .gallery__photos-item:nth-child(3n) {
+    margin-right: 0;
   }
   .main .gallery__photos-size {
-    width: 21.5rem;
-    height: 12.06rem;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 193px;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
