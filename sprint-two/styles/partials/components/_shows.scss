@@ -1,0 +1,190 @@
+.phantom {
+    &__image {
+        background-image: url(../assets/images/Shows-2.jpg);
+        background-size: cover; 
+        background-position: center;
+        height: 472px;
+        width: 100%;
+        
+    }
+
+    &__heading {
+        color: $white;
+        &--margin {
+            margin: auto 16px;
+        }
+        &-small {
+          margin: 0;
+          padding-top: 64px;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        
+        &-large {
+            margin-bottom: 64px;
+            margin-top: 16px;
+            font-size: 36px;
+            line-height: 44px;
+          
+        }
+    }
+
+    &__iframe {
+        margin: auto 16px;
+        // border-bottom: 10px;
+        &-property {
+            border-radius: 15px;
+            height: 100px;
+            width: 100%;
+        }
+    }
+
+            @include tablet {
+                
+                @include tabletText;
+
+                &__image {
+                    height: 670px;
+                }
+
+                &__heading {
+                    @include heroText;
+                    width: 580px;
+                    
+                    &--margin {
+                        margin: auto 24px;
+                    }
+                    &-small {
+                        font-size: 24px;
+                        line-height: 36px;
+                        padding-top: 96px;
+                        padding-bottom: 30px;
+                    }
+
+                }
+
+                &__iframe {
+                    margin: auto 24px;
+                    &-property {
+                        height: 146px;
+                        width: 436px;
+
+                    }
+                }
+            }
+
+            @include desktop {
+                &__image {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &__heading {
+                    margin: 0 0 0 180px;
+
+                    &-small {
+                        padding-top: 140px;
+                    }
+                }
+
+                &__iframe {
+                    margin-right: 180px;
+                }
+
+            }
+}
+// ================phantom-end========================
+
+
+// ====================shows-start===================
+
+.shows {
+    margin: auto 16px;
+    &__heading {
+        margin: 32px 0 40px 0;
+    }
+
+    &__ticket {
+        border-bottom: 2px solid $backgroundColor;
+        padding-bottom: 14px;
+        &-property {
+            color: $backgroundColor;
+            margin-bottom: 16px;
+            
+        }
+
+        &-before {
+            margin-bottom: 32px;
+        }
+
+        &-btn {
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 48px;
+            border-radius: 5px;
+        }
+    }
+
+    // ============tablet===============
+
+            @include tablet {
+                @include tabletText;
+                margin: auto 24px;
+                &__tickets {  
+                    margin-bottom: 40px;
+                }
+
+                &__ticket {
+                    margin-top: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: unset;
+                    
+                    &-block {
+                        flex-grow: 1;
+                        flex-basis: 0;
+                    }
+
+
+                    &-property {
+                        color: $backgroundColor;
+                        margin-bottom: 40px;
+                        &--hide {
+                            display: none;
+                        }
+                    }
+            
+                    &-btn {
+                        background-color: black;
+                        color: white;
+                        width: 160px;
+                        height: 48px;
+                        border-radius: 5px;
+                        &--first {
+                            position: relative;
+                            top: 60px;
+                        }
+                    }
+                }
+                
+            }
+
+            @include desktop {
+                display: flex;
+                margin: auto 180px;
+                justify-content: space-between;
+
+                &__heading {
+                    margin: 40px 0;
+                }
+
+                &__tickets {
+                    width: 804px;
+                }
+
+            }
+            
+
+}
+ 

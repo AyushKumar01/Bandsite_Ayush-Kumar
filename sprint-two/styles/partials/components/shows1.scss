@@ -1,0 +1,113 @@
+
+.shows {
+    margin: auto 16px;
+    &__heading {}
+
+    &__ticket {
+        &-property {
+            color: $backgroundColor;
+        }
+
+        &-date {
+            // &::before {
+            //     content: "DATE";
+            //     display: block;
+            //     position: relative;
+            //     bottom: 10px;
+            //     clear: both;
+            //     font-size: 13px;
+            //     line-height: 18px;
+            //     color: $backgroundColor;
+            // }
+        }
+
+        &-para {
+            // &::before {
+           
+            //     content: "DATE";
+            //     display: block;
+            //     position: relative;
+            //     bottom: 10px;
+            //     clear: both;
+            //     font-size: 13px;
+            //     line-height: 18px;
+            //     color: $backgroundColor;
+            
+            // }
+
+        }
+
+        &-btn {
+            background-color: black;
+            color: white;
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    // ============tablet===============
+
+            @include tablet {
+                @include tabletText;
+                margin: auto 24px;
+                &__heading {}
+
+                &__ticket {
+                    display: flex;
+                    justify-content: space-between;
+                    &-property {
+                        color: $backgroundColor;
+                    }
+                    &-one {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: baseline;
+                    }
+            
+                    &-date {}
+            
+                    &-para {
+            
+                    }
+            
+                    &-btn {
+                        background-color: black;
+                        color: white;
+                        width: 160px;
+                        height: 48px;
+                        border-radius: 5px;
+                        &--first {
+                            position: relative;
+                            top: 40px;
+                        }
+                    }
+                }
+                
+            }
+
+            @include desktop {
+                display: flex;
+                margin: auto 180px;
+                justify-content: space-between;
+
+                &__tickets {
+                    min-width: 804px;
+                }
+
+                &__ticket {
+                    &-btn {
+                        &--hd3 {
+                            margin: 0;
+                        }
+                    }
+                }
+                
+                
+                // &__hd3 {
+                //     margin: 0;
+                // }
+                
+            }
+            
+
+}

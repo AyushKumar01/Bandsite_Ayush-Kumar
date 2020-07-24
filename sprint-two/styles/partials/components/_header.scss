@@ -1,0 +1,78 @@
+
+.header {
+    @include mobileText;
+    background-color: $lightBlack;
+    color: white;
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    text-align: center;
+    &__first {
+        margin-top: 16px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        line-height: 35px;
+        
+
+        &-element {
+            width: 50%;
+            &:active {
+                border-bottom: 5px solid white;
+            }
+            &:hover {
+                background-color: $brightBlack;
+                cursor: pointer;
+            }
+        }
+
+        &-active{
+            border-bottom: 5px solid white;
+        }
+    }
+      
+
+// ==========breakpoint===========
+    @include tablet {
+        @include tabletText;
+        flex-direction: row;
+        align-items: center;
+        &__first {
+            margin: 0 24px;
+        }
+
+        &__second {
+            padding-top: 10px;
+        }
+
+            
+        &__list {
+            line-height: 75px;
+            &-element {
+                width: auto;
+                padding: 0px 5px;
+                margin: 0 20px 10px;
+            }
+        }
+
+    }
+
+    @include desktop {
+        &__first {
+            margin: 0 0 0 180px;
+        }
+
+        &__list {
+            line-height: 75px;
+
+            &-element {
+                margin:0 0 10px 56px;
+    
+            }
+
+        }
+        
+    }
+}

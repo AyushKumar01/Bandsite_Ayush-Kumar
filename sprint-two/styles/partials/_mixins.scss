@@ -1,0 +1,115 @@
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin mobileText {
+      h1 {
+          font-size: 24px;
+          line-height: 32px;
+      }
+      
+      h2 {
+          font-size: 14px;
+          line-height: 22px;
+      }
+      
+      h4 {
+          font-size: 13px;
+          line-height: 18px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 18px;
+      }
+      
+      h5 {
+          font-size: 12px;
+          line-height: 20px;
+      }
+  }
+
+  @mixin tabletText {
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    h5 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+  @mixin tabParaFont {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @mixin tabContactFont {
+        font-size: 14px;
+        line-height: 20px;
+  }
+
+
+
+  @mixin heroText {
+    h1 {
+      font-size: 60px;
+      line-height: 68px;
+    }
+    
+  }
+
+  @mixin footerTwoMrg {
+      padding-right: 5rem;
+        
+      &--headings {
+          margin: 0 0 1.5rem 0;
+      }
+
+      &--para {
+        margin: 1.5rem 0 0 0;
+      }
+      
+  } 
+
+  @mixin grid ($cols, $mgn) {
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols );
+
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+    
+}
+
+@mixin showsHideElm {
+  display: none;
+}
+  
