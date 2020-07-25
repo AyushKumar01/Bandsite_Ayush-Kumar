@@ -119,7 +119,7 @@ a {
   cursor: pointer;
 }
 
-.header__list-active {
+.header__list-element--active {
   border-bottom: 5px solid white;
 }
 
@@ -655,6 +655,255 @@ a {
   }
   .shows__tickets {
     width: 804px;
+  }
+}
+
+.comments {
+  color: #323232;
+  margin: 32px 16px 0;
+}
+
+.comments h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.comments h2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.comments h4 {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.comments p {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.comments h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.comments__heading {
+  margin-bottom: 40px;
+}
+
+.comments__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #645e5e;
+  padding-bottom: 32px;
+}
+
+.comments__image {
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  background-position: left center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  top: 27px;
+  margin-right: 20px;
+}
+
+.comments__form-name {
+  margin: 8px 0 24px 0;
+  border-radius: 4px;
+  height: 48px;
+  width: 224px;
+}
+
+.comments__form-message {
+  background-color: #fafafa;
+  margin: 8px 0 16px 0;
+  border-radius: 4px;
+  height: 100px;
+  width: 224px;
+}
+
+.comments__form-btn {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  height: 48px;
+  width: 224px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.comments__form-label {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .comments {
+    margin: 0;
+  }
+  .comments__heading {
+    margin-left: 24px;
+  }
+  .comments__block {
+    margin: auto 120px;
+    width: 528px;
+  }
+  .comments__form-name {
+    width: 460px;
+  }
+  .comments__form-message {
+    width: 460px;
+  }
+  .comments__form-btn {
+    width: 160px;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments__block {
+    margin: auto 456px;
+  }
+  .comments__heading {
+    margin-left: 180px;
+  }
+}
+
+.reviews {
+  color: #323232;
+  margin: 0 16px 40px;
+}
+
+.reviews h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.reviews h2 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.reviews h4 {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.reviews p {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.reviews h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.reviews__block {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 24px;
+}
+
+.reviews__image {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0px 16px 0 0;
+}
+
+.reviews__inside {
+  width: 265px;
+}
+
+.reviews__inside-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.reviews__inside-first-para {
+  margin: 0;
+}
+
+.reviews__inside-first-para--color {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.reviews__inside-second-para {
+  margin-bottom: 24px;
+  font-weight: normal;
+  width: 215px;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    margin: 0 120px 40px;
+  }
+  .reviews h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .reviews h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .reviews h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .reviews h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .reviews h5 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .reviews__block {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 528px;
+  }
+  .reviews__inside {
+    width: unset;
+  }
+  .reviews__inside-first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .reviews__inside-first-para {
+    margin-right: .75rem;
+  }
+  .reviews__inside-second-para {
+    width: 472px;
+    font-weight: normal;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews {
+    margin: 0 456px 40px;
   }
 }
 

@@ -1,0 +1,88 @@
+.reviews {   
+    color: #323232;
+    @include mobileText;
+    margin: 0 16px 40px;
+
+    &__block {
+        border-bottom: 1px solid $backgroundColor;
+        display: flex;
+        padding-top: 24px;
+    }
+
+    &__image {
+        background-color: $backgroundColor;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0px 16px 0 0;
+    }
+
+    &__inside {
+        width: 265px;
+        // padding: 24px 0 8px 0;
+    }
+
+    &__inside-first {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__inside-first-para {
+        margin: 0;
+        &--color {
+            color: $backgroundColor;
+        }
+    }
+
+    &__inside-second-para {
+        margin-bottom: 24px;
+        font-weight: normal;
+        width: 215px;
+    }
+
+
+    // ==============reviws-tablet==================
+    
+        @include tablet {
+            @include tabletText;
+            margin: 0 120px 40px;
+
+            &__block {
+                border-bottom: 1px solid $backgroundColor;
+                width: 528px;
+            }
+        
+            &__inside {  
+                width: unset;
+                // padding: 24px 0 8px 0;
+            }
+
+            &__inside-first {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+            }
+
+            &__inside-first-para {
+                margin-right: .75rem;
+            }
+
+            &__inside-second-para {
+                // margin-bottom: 24px;
+                width: 472px;
+                font-weight: normal;
+            }
+        }
+
+    // ===============reviews-desktop============
+
+
+        @include desktop {
+            margin: 0 456px 40px;
+            &__block {
+                // margin: auto 456px;
+            }
+        }
+}

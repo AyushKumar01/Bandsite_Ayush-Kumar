@@ -15,24 +15,25 @@
         display: flex;
         justify-content: space-around;
         line-height: 35px;
-        
+    }
 
-        &-element {
-            width: 50%;
-            &:active {
-                border-bottom: 5px solid white;
-            }
-            &:hover {
-                background-color: $brightBlack;
-                cursor: pointer;
-            }
-        }
-
-        &-active{
+    &__list-element {
+        width: 50%;
+        &:active {
             border-bottom: 5px solid white;
         }
-    }
+        &:hover {
+            background-color: $brightBlack;
+            cursor: pointer;
+        }
+        // }
+        
+        &--active{
+            border-bottom: 5px solid white;
+        }
       
+    }
+    
 
 // ==========breakpoint===========
     @include tablet {

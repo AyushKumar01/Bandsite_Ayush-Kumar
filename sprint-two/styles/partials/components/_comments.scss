@@ -1,0 +1,106 @@
+
+// ==================comment-start====================
+
+.comments {
+    color: #323232;
+    @include mobileText;
+    margin: 32px 16px 0;
+    
+    &__heading {
+        margin-bottom: 40px;
+    }
+
+    &__block {
+        display: flex;
+        // justify-content: flex-end;
+        border-bottom: 1px solid $brightBlack;
+        padding-bottom: 32px;
+        
+    }
+
+    
+    &__image {
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-size: cover; 
+        background-position: left center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        top: 27px;
+        margin-right: 20px;
+    }
+    // &__form {
+    //    display: flex;
+    //     }
+    &__form-name {
+        margin: 8px 0 24px 0;
+        border-radius: 4px;
+        height: 48px;
+        width: 224px;
+    }
+
+    &__form-message {
+        background-color: $offWhite;
+        margin: 8px 0 16px 0;
+        border-radius: 4px;
+        height: 100px;
+        width: 224px;
+    }
+
+    
+    &__form-btn {
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        height: 48px;
+        width: 224px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    &__form-label {
+        color: $backgroundColor;
+        font-weight: bold;
+    }
+
+    // ===================comments-tablet=================
+        @include tablet {
+            margin: 0;
+
+            &__heading {
+                margin-left: 24px;
+            }
+
+            &__block {
+                margin: auto 120px;
+                width: 528px;
+            }
+            &__form-name {
+                width: 460px;
+            }
+
+            &__form-message {
+                width: 460px;
+            }
+            
+            &__form-btn {
+                width: 160px;
+                float: right;
+            }
+        }
+    // ====================comments-desktop====================
+     
+        @include desktop {
+            &__block {
+                margin: auto 456px;
+            }
+
+            &__heading {
+                margin-left: 180px;
+            }
+        }
+
+
+// ====================comments-end-bracket==========================
+}
