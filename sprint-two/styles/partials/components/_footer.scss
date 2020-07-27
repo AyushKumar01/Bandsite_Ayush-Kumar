@@ -9,8 +9,8 @@
         @include tabContactFont;
     }
     
-    &__logo {
-        display: none;
+    &__heading {
+        padding: 1.5rem 0 1rem 0;
     }
 
     &__icon{
@@ -19,18 +19,18 @@
         }
     }
 
-    &__heading {
-        padding: 1.5rem 0 1rem 0;
+    &__logo {
+        display: none;
     }
 
     &__three {
         padding-bottom: 1.25rem;
-        max-width: 220px;
-        &-font {
-            font-size: 14px;
-            line-height: 22px;
-        }
+        max-width: 68.75vw;
+    }
 
+    &__three-font {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
     }
 
     @include tablet {
@@ -64,7 +64,7 @@
 
     @include desktop {
         @include tabletText;
-        margin: auto 180px;
+        margin: auto 12.5vw;
 
         &__one {
             display: flex;
@@ -112,12 +112,10 @@
             padding-bottom: 1.75rem;
         }
 
-        &__logo {
-            &-size {
-            width: 120px;
-            height: 24px;
+        &__logo-size {
+            width: 8.333vw;
+            height: 1.5rem;
             }
-        }
 
     }
 

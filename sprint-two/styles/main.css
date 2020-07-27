@@ -69,28 +69,28 @@ a {
 }
 
 .header h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .header h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .header h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .header p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .header h5 {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .header__first {
@@ -134,24 +134,24 @@ a {
             align-items: center;
   }
   .header h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .header h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .header h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .header h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .header h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .header__first {
     margin: 0 24px;
@@ -184,6 +184,8 @@ a {
 .hero__image {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url(../assets/concert-1.jpg);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../assets/concert-1.jpg);
+  -webkit-filter: contrast(120%);
+          filter: contrast(120%);
   background-size: cover;
   background-position: top center;
   height: 30vh;
@@ -209,8 +211,8 @@ a {
     width: 100vw;
   }
   .hero__image h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
   .hero__image-heading {
     width: 500px;
@@ -224,8 +226,8 @@ a {
     width: 100%;
   }
   .hero__image h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
   .hero__image-heading {
     min-width: 500px;
@@ -239,56 +241,56 @@ a {
 }
 
 .footer h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .footer h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .footer h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .footer p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .footer h5 {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .footer p {
   font-weight: lighter;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.footer__logo {
-  display: none;
-}
-
-.footer__icon--margin {
-  margin-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .footer__heading {
   padding: 1.5rem 0 1rem 0;
 }
 
+.footer__icon--margin {
+  margin-right: 1rem;
+}
+
+.footer__logo {
+  display: none;
+}
+
 .footer__three {
   padding-bottom: 1.25rem;
-  max-width: 220px;
+  max-width: 68.75vw;
 }
 
 .footer__three-font {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -296,24 +298,24 @@ a {
     margin: 0 1.5rem 0;
   }
   .footer h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .footer h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .footer h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .footer h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .footer__one {
     display: -webkit-box;
@@ -347,27 +349,27 @@ a {
 
 @media screen and (min-width: 1440px) {
   .footer {
-    margin: auto 180px;
+    margin: auto 12.5vw;
   }
   .footer h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .footer h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .footer h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .footer h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .footer__one {
     display: -webkit-box;
@@ -433,8 +435,8 @@ a {
     padding-bottom: 1.75rem;
   }
   .footer__logo-size {
-    width: 120px;
-    height: 24px;
+    width: 8.333vw;
+    height: 1.5rem;
   }
 }
 
@@ -482,24 +484,24 @@ a {
 
 @media screen and (min-width: 768px) {
   .phantom h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .phantom h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .phantom h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .phantom h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .phantom h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .phantom__image {
     height: 670px;
@@ -508,8 +510,8 @@ a {
     max-width: 75.52vw;
   }
   .phantom__heading h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
   .phantom__heading--margin {
     margin: auto 3.125vw;
@@ -598,24 +600,24 @@ a {
     margin: auto 1.5rem;
   }
   .shows h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .shows h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .shows h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .shows h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .shows h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .shows__tickets {
     margin-bottom: 2.5rem;
@@ -685,28 +687,28 @@ a {
 }
 
 .comments h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .comments h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .comments h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .comments p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .comments h5 {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .comments__heading {
@@ -814,28 +816,28 @@ a {
 }
 
 .reviews h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .reviews h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .reviews h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .reviews p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .reviews h5 {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .reviews__block {
@@ -892,24 +894,24 @@ a {
     margin: 0 7.5rem 2.5rem;
   }
   .reviews h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .reviews h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .reviews h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .reviews h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .reviews h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .reviews__block {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -958,28 +960,28 @@ a {
 }
 
 .main h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .main h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .main h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .main p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.812rem;
+  line-height: 1.125rem;
 }
 
 .main h5 {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .main__heading {
@@ -1025,24 +1027,24 @@ a {
 
 @media screen and (min-width: 768px) {
   .main h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .main h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .main h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .main h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .main__heading {
     margin: 2rem 0 1.5rem 1.5rem;
@@ -1060,36 +1062,36 @@ a {
     display: flex;
   }
   .main .about__para-one {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main .about__para-two {
     margin: 1.5rem 0 1.5rem 1.5rem;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .main h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .main h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .main h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .main h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .main__heading {
     margin: 3rem 0 3rem 11.25rem;
@@ -1109,13 +1111,13 @@ a {
   }
   .main .about__para-one {
     margin: 2rem 20px 3rem 0;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main .about__para-two {
     margin: 2rem 0 3rem 20px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1158,24 +1160,24 @@ a {
 
 @media screen and (min-width: 768px) {
   .main .gallery h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .main .gallery h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .main .gallery h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .main .gallery h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main .gallery h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .main .gallery__album {
     margin: 0;
@@ -1206,24 +1208,24 @@ a {
 
 @media screen and (min-width: 1440px) {
   .main .gallery h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .main .gallery h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .main .gallery h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .main .gallery h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   .main .gallery h5 {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   .main .gallery__heading {
     margin-left: 12.5vw;

@@ -4,6 +4,7 @@
     background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2))
     , url(../assets/concert-1.jpg);
+    filter: contrast(120%);
     background-size: cover; 
     background-position: top center;
     height: 30vh;
