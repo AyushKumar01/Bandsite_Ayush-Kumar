@@ -1,8 +1,8 @@
 const reviews = [
     {
         'name':'Micheal Lyons',
-        'date': new Date('12/18/2018'),
-        'description': 'They BLEW the ROOF off at their last show, \
+        'timestamp': new Date('12/18/2018'),
+        'comment': 'They BLEW the ROOF off at their last show, \
                         once everyone started figuring out they were going. \
                         This is still simply the greatest opening of a concert \
                         I have EVER witnessed.',
@@ -10,8 +10,8 @@ const reviews = [
     
     {
         'name':'Gary Wong',
-        'date': new Date('12/12/2018'),
-        'description': 'Every time I see him shred I feel so \
+        'timestamp': new Date('12/12/2018'),
+        'comment': 'Every time I see him shred I feel so \
                         motivated to get off my couch and \
                         hop on my board. He’s so talented! I \
                         wish I can ride like him one day so I \
@@ -20,8 +20,8 @@ const reviews = [
 
     {
         'name':'Theodore Duncan',
-        'date': new Date('11/15/2018'),
-        'description': 'How can someone be so good!!! \
+        'timestamp': new Date('11/15/2018'),
+        'comment': 'How can someone be so good!!! \
                         You can tell he lives for this and \
                         loves to do it every day. Everytime I \
                         see him I feel instantly happy! He’s \
@@ -37,7 +37,7 @@ const commentForm = document.querySelector(".comments__form");
 
 function createComment(reviewsSection, reviews) {
     reviewsSection.innerHTML = " ";
-    reviews.sort(function(a, b){ return b.date - a.date });
+    reviews.sort(function(a, b){ return b.timestamp - a.timestamp });
     for (const review of reviews) {
         // create a div with class "reviews__block" and append in parent div//
         let reviewBlock = createReviewElement("div", "reviews__block", "");
@@ -56,21 +56,19 @@ function createComment(reviewsSection, reviews) {
         // create a 'p' with class "reviews__inside-first-para,reviews__inside-first-para--color",// 
         // set innerText and append in parent div
                                                                                             // changeDateTimeFormat(review.date)
-        var aDay = 24*60*60*1000;
-        reviewInsideFirst.appendChild(createReviewElement("p", "reviews__inside-first-para,reviews__inside-first-para--color", timeAgo(review.date)));
+        reviewInsideFirst.appendChild(createReviewElement("p", "reviews__inside-first-para,reviews__inside-first-para--color", timeAgo(review.timestamp)));
         // append in parent div//    
         reviewInside.appendChild(reviewInsideFirst);
         // create a div with class "reviews__inside-second"//
         let reviewInsideSecond = createReviewElement("div", "reviews__inside-second", "");
         // create a h4 with class "reviews__inside-second-para", set innerText and append in parent div//
-        reviewInsideSecond.appendChild(createReviewElement("h4", "reviews__inside-second-para", review.description));
+        reviewInsideSecond.appendChild(createReviewElement("h4", "reviews__inside-second-para", review.comment));
         //  and append in parent div//
         reviewInside.appendChild(reviewInsideSecond);
     }
 } 
 
 function createReviewElement(elementName, className, innerText){
-
     let elm = document.createElement(elementName);
     if(className.includes(",")){
         let classArray = className.split(",");
@@ -156,8 +154,8 @@ commentForm.addEventListener('submit', function(event) {
     let formComment = event.target.reviewerComment.value;
     if(formReviewer !== "" && formComment !== ""){
         comment = { 'name': formReviewer,
-                'date': new Date(),
-                'description': formComment
+                'timestamp': new Date(),
+                'comment': formComment
               }
         displayComment(comment);
     }else {
