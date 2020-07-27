@@ -2,7 +2,7 @@
 .footer {
     @include mobileText;
     color: $white;
-    margin-left: 10px;
+    margin-left: .625rem;
     
     p {
         font-weight: lighter;
@@ -24,7 +24,7 @@
     }
 
     &__three {
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem;
         max-width: 220px;
         &-font {
             font-size: 14px;

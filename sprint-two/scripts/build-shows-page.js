@@ -11,12 +11,20 @@ const shows = [
 // get shows section first
 const showsSection = document.querySelector(".shows");
 
-function createElement(element, className, innerText){
+function createShowElement(element, className, innerText){
     let elm = document.createElement(element);
-    elm.classList.add(className);
+    if(className.includes(",")){
+        let classArray = className.split(",");
+        for(classObj of classArray){     
+            elm.classList.add(classObj); 
+        }
+    }else{
+        elm.classList.add(className);
+    }
     elm.innerText = innerText;
     return elm;
 }
+
 
 function createShow(show, isOtherRow){
     // create a div, add class shows__ticket
@@ -30,34 +38,28 @@ function createShow(show, isOtherRow){
            keyContainer.classList.add("shows__ticket-block");
 
                 if(isOtherRow){
-                    let keyHeader = document.createElement("h4");
-                    keyHeader.classList.add("shows__ticket-property");
-                    keyHeader.classList.add("shows__ticket-property--hide");
-                    keyHeader.innerText = key;
-                    keyContainer.appendChild(keyHeader);
+                    // create elm h4, add class shows__ticket-property,shows__ticket-property--hide, append in block.
+                    keyContainer.appendChild(createShowElement("h4", "shows__ticket-property,shows__ticket-property--hide", key));
                 }else{
-                    // create elm h4, add class shows__ticket-property,  append in block.
-                    keyContainer.appendChild(createElement("h4", "shows__ticket-property", key));
+                    // create elm h4, add class shows__ticket-property, append in block.
+                    keyContainer.appendChild(createShowElement("h4", "shows__ticket-property", key));
                 }               
 
                 // if key = Date then create h3 else create p, add class shows__ticket-before, append in block.
                 if (key.toUpperCase() === "DATE") {
-                    keyContainer.appendChild(createElement("h3", "shows__ticket-before", show[key]));
+                    keyContainer.appendChild(createShowElement("h3", "shows__ticket-before", show[key]));
                 } else{
-                    keyContainer.appendChild(createElement("p", "shows__ticket-before", show[key]));
+                    keyContainer.appendChild(createShowElement("p", "shows__ticket-before", show[key]));
                 }
                 showContainer.appendChild(keyContainer);
         }
            
         if(isOtherRow){
-             // create a btn, add class shows__ticket-btn ==shows__ticket-btn--first, append in ticket. 
-             showContainer.appendChild(createElement("button", "shows__ticket-btn", "BUY TICKETS"));
+             // create a btn, add class shows__ticket-btn, append in ticket. 
+             showContainer.appendChild(createShowElement("button", "shows__ticket-btn", "BUY TICKETS"));
         }else{
-            let firstBtn = document.createElement("button");
-            firstBtn.classList.add("shows__ticket-btn");
-            firstBtn.classList.add("shows__ticket-btn--first");
-            firstBtn.innerText = "BUY TICKETS";
-            showContainer.appendChild(firstBtn);              
+            // create a btn, add class shows__ticket-btn,shows__ticket-btn--first, append in ticket.  
+            showContainer.appendChild(createShowElement("button", "shows__ticket-btn,shows__ticket-btn--first", "BUY TICKETS"));              
         }
         return showContainer;
 }

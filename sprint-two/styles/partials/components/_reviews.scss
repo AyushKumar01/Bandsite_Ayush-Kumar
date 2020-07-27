@@ -1,29 +1,29 @@
 .reviews {   
     color: #323232;
     @include mobileText;
-    margin: 0 16px 40px;
+    margin: 0 1rem 2.5rem;
 
     &__block {
         border-bottom: 1px solid $backgroundColor;
         display: flex;
-        padding-top: 24px;
+        padding-top: 1.5rem;
     }
 
     &__image {
         background-color: $backgroundColor;
-        min-width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 50%;
-        margin: 0px 16px 0 0;
+        margin-right: 1rem;
     }
 
     &__inside {
-        width: 265px;
-        // padding: 24px 0 8px 0;
+        width: 80vw;
     }
 
     &__inside-first {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: baseline;
     }
@@ -32,13 +32,14 @@
         margin: 0;
         &--color {
             color: $backgroundColor;
+            font-weight: bold;
         }
     }
 
     &__inside-second-para {
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
         font-weight: normal;
-        width: 215px;
+        width: 67.18vw;
     }
 
 
@@ -46,11 +47,11 @@
     
         @include tablet {
             @include tabletText;
-            margin: 0 120px 40px;
+            margin: 0 7.5rem 2.5rem;
 
             &__block {
                 border-bottom: 1px solid $backgroundColor;
-                width: 528px;
+                width: 68.75vw;
             }
         
             &__inside {  
@@ -71,7 +72,7 @@
 
             &__inside-second-para {
                 // margin-bottom: 24px;
-                width: 472px;
+                width: 61.458vw;
                 font-weight: normal;
             }
         }
@@ -80,9 +81,14 @@
 
 
         @include desktop {
-            margin: 0 456px 40px;
+            margin: 0 31.66vw 2.5rem 31.66vw;
             &__block {
-                // margin: auto 456px;
+                border-bottom: 1px solid $backgroundColor;
+                width: 36.66vw;
+            }
+            &__inside-second-para {
+                width: 32.77vw;
+                font-weight: normal;
             }
         }
 }

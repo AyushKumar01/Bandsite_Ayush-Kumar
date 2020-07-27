@@ -2,19 +2,19 @@
 // ==================comment-start====================
 
 .comments {
-    color: #323232;
+    color: $lightBlack;
     @include mobileText;
-    margin: 32px 16px 0;
+    margin: 2rem 1rem 0;
     
     &__heading {
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
     }
 
     &__block {
         display: flex;
         // justify-content: flex-end;
-        border-bottom: 1px solid $brightBlack;
-        padding-bottom: 32px;
+        border-bottom: 1px solid $backgroundColor;
+        padding-bottom: 2rem;
         
     }
 
@@ -23,38 +23,38 @@
         background-image: url(../assets/images/Mohan-muruge.jpg);
         background-size: cover; 
         background-position: left center;
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         position: relative;
-        top: 27px;
-        margin-right: 20px;
+        top: 1.687rem;
+        margin-right: 1.25rem;
     }
     // &__form {
     //    display: flex;
     //     }
     &__form-name {
-        margin: 8px 0 24px 0;
-        border-radius: 4px;
-        height: 48px;
-        width: 224px;
+        margin: 0.5rem 0 1.5rem 0;
+        border-radius: 0.25rem;
+        height: 3rem;
+        width: 70vw;
     }
 
     &__form-message {
         background-color: $offWhite;
-        margin: 8px 0 16px 0;
-        border-radius: 4px;
-        height: 100px;
-        width: 224px;
+        margin: 0.5rem 0 1rem 0;
+        border-radius: 0.25rem;
+        height: 16.393vh;
+        width: 70vw;
     }
 
     
     &__form-btn {
         background-color: black;
         color: white;
-        border-radius: 4px;
-        height: 48px;
-        width: 224px;
+        border-radius: 0.25rem;
+        height: 7.868vh;
+        width: 70vw;
         font-weight: bold;
         letter-spacing: 1px;
     }
@@ -69,36 +69,52 @@
             margin: 0;
 
             &__heading {
-                margin-left: 24px;
+                margin-left: 1.5rem;
             }
 
             &__block {
-                margin: auto 120px;
-                width: 528px;
+                margin: auto 7.5rem;
+                width: 68.75vw;
             }
             &__form-name {
-                width: 460px;
+                width: 59.895vw;
             }
 
             &__form-message {
-                width: 460px;
+                width: 59.895vw;
             }
             
             &__form-btn {
-                width: 160px;
+                width: 20.833vw;
+                height: 3rem;
                 float: right;
             }
         }
     // ====================comments-desktop====================
      
         @include desktop {
+            &__heading {
+                margin-left: 12.5vw;
+            }
             &__block {
-                margin: auto 456px;
+                margin: auto 31.66vw;
+                width: 36.66vw;
+            }
+            &__form-name {
+                width: 31.944vw;
             }
 
-            &__heading {
-                margin-left: 180px;
+            &__form-message {
+                width: 31.944vw;
             }
+            
+            &__form-btn {
+                width: 11.111vw;
+                height: 3rem;
+                float: right;
+            }
+
+           
         }
 
 

@@ -3,9 +3,9 @@
     &__image  {
     background-image: url(../assets/concert-1.jpg);
     background-size: cover; 
-    background-position: center;
-    height: 183px;
-    width: 100%;
+    background-position: top center;
+    height: 30vh;
+    width: 100vw;
     display: flex;
     align-items: center;
 
@@ -14,16 +14,16 @@
             margin: 0;
             width: 250px;
             margin-left: 1rem;
-
         }
 
         @include tablet {
             @include heroText;
             height: 400px;
-            width: 100%;
+            width: 100vw;
+            
 
               &-heading {
-                  min-width: 500px;
+                  width: 500px;
                   margin-left: 24px;
               }
         }
