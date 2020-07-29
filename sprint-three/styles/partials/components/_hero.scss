@@ -1,0 +1,48 @@
+
+.hero {
+    &__image  {
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .2))
+    , url(../assets/concert-1.jpg);
+    filter: contrast(120%);
+    background-size: cover; 
+    background-position: top center;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+        &-heading {
+            color: white;
+            margin: 0;
+            width: 250px;
+            margin-left: 1rem;
+        }
+
+        @include tablet {
+            @include heroText;
+            height: 400px;
+            width: 100vw;
+            
+
+              &-heading {
+                  width: 500px;
+                  margin-left: 24px;
+              }
+        }
+
+
+        @include desktop {
+            @include heroText;
+            height: 670px;
+            width: 100%;
+
+              &-heading {
+                  min-width: 500px;
+                  margin-left: 180px;
+              }
+        }
+
+    }
+
+}

@@ -1,0 +1,124 @@
+
+// ==================comment-start====================
+
+.comments {
+    color: $lightBlack;
+    @include mobileText;
+    margin: 2rem 1rem 0;
+    
+    &__heading {
+        margin-bottom: 2.5rem;
+    }
+
+    &__block {
+        display: flex;
+        // justify-content: flex-end;
+        border-bottom: 1px solid $backgroundColor;
+        padding-bottom: 2rem;
+        
+    }
+
+    
+    &__image {
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-size: cover; 
+        background-position: left center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        position: relative;
+        top: 1.687rem;
+        margin-right: 1.25rem;
+    }
+    // &__form {
+    //    display: flex;
+    //     }
+    &__form-name {
+        margin: 0.5rem 0 1.5rem 0;
+        border-radius: 0.25rem;
+        height: 3rem;
+        width: 70vw;
+    }
+
+    &__form-message {
+        background-color: $offWhite;
+        margin: 0.5rem 0 1rem 0;
+        border-radius: 0.25rem;
+        height: 16.393vh;
+        width: 70vw;
+    }
+
+    
+    &__form-btn {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        height: 7.868vh;
+        width: 70vw;
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    &__form-label {
+        color: $backgroundColor;
+        font-weight: bold;
+    }
+
+    // ===================comments-tablet=================
+        @include tablet {
+            margin: 0;
+
+            &__heading {
+                margin-left: 1.5rem;
+            }
+
+            &__block {
+                margin: auto 7.5rem;
+                width: 68.75vw;
+            }
+            &__form-name {
+                width: 59.895vw;
+            }
+
+            &__form-message {
+                width: 59.895vw;
+            }
+            
+            &__form-btn {
+                width: 20.833vw;
+                height: 3rem;
+                float: right;
+            }
+        }
+    // ====================comments-desktop====================
+     
+        @include desktop {
+            &__heading {
+                margin-left: 12.5vw;
+            }
+            &__block {
+                margin: auto 31.66vw;
+                width: 36.66vw;
+            }
+            &__form-name {
+                width: 31.944vw;
+            }
+
+            &__form-message {
+                width: 31.944vw;
+            }
+            
+            &__form-btn {
+                width: 11.111vw;
+                height: 3rem;
+                float: right;
+            }
+
+           
+        }
+
+
+// ====================comments-end-bracket==========================
+}

@@ -1,0 +1,139 @@
+
+.footer {
+    @include mobileText;
+    color: $white;
+    margin-left: .625rem;
+    
+    p {
+        font-weight: lighter;
+        @include tabContactFont;
+    }
+    
+    &__heading {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    &__icon{
+        &--margin {
+            margin-right: 1rem;
+        }
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    &__three {
+        padding-bottom: 1.25rem;
+        max-width: 68.75vw;
+    }
+
+    &__three-font {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+
+    @include tablet {
+        @include tabletText;
+        margin: 0 1.5rem 0;
+
+        &__one {
+            display: flex;
+            align-items: baseline; 
+            justify-content: space-between;    
+        }
+
+        &__icon {
+            padding-right: 4rem;
+        }
+
+        &__logo {
+            display: unset;
+        }
+
+        &__two {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__three {
+            max-width: unset
+            
+        }
+    }
+
+    @include desktop {
+        @include tabletText;
+        margin: auto 12.5vw;
+
+        &__one {
+            display: flex;
+            justify-content: space-between; 
+            align-items: baseline;     
+        }
+
+        &__heading {
+            padding: 0;
+            &--margin {
+                margin: 0;
+                padding: 3rem 0 3.5rem 0;
+            }
+        }
+
+        &__icon {
+            margin-right: 25rem;
+
+            &--margin {
+               margin-right: 2rem;
+            }
+        }
+
+        &__two {
+            display: flex;
+            justify-content: flex-start;
+            
+            &-left {
+              @include footerTwoMrg;
+             
+            }
+
+            &-mid {
+                @include footerTwoMrg;
+            }
+
+            &-right {
+                @include footerTwoMrg;
+            }
+           
+        }
+
+        &__three {
+            margin-top: 2.5rem;
+            padding-bottom: 1.75rem;
+        }
+
+        &__logo-size {
+            width: 8.333vw;
+            height: 1.5rem;
+            }
+
+    }
+
+}
+
+            
+
+        
+       
+        
+
+        
+      
+
+
+       
+
+        
+        
+
+   
