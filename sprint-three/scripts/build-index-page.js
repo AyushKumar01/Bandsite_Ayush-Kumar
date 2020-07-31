@@ -1,46 +1,6 @@
-// const reviews = [
-//     {
-//         'name':'Micheal Lyons',
-//         'timestamp': new Date('12/18/2018'),
-//         'comment': 'They BLEW the ROOF off at their last show, \
-//                         once everyone started figuring out they were going. \
-//                         This is still simply the greatest opening of a concert \
-//                         I have EVER witnessed.',
-//     },
-    
-//     {
-//         'name':'Gary Wong',
-//         'timestamp': new Date('12/12/2018'),
-//         'comment': 'Every time I see him shred I feel so \
-//                         motivated to get off my couch and \
-//                         hop on my board. He’s so talented! I \
-//                         wish I can ride like him one day so I \
-//                         can really enjoy myself!',
-//     },
-
-//     {
-//         'name':'Theodore Duncan',
-//         'timestamp': new Date('11/15/2018'),
-//         'comment': 'How can someone be so good!!! \
-//                         You can tell he lives for this and \
-//                         loves to do it every day. Everytime I \
-//                         see him I feel instantly happy! He’s \
-//                         definitely my favorite ever!',
-//     }
-// ]
-// access section from html by class .reviews//
-
-// axios
-//    .get(`${url}${apiKey}`)
-//   .then((response) => response.data)
-//   .then((data) => {}
-//     console.log(data);
-
 const reviewsSection = document.querySelector(".reviews");
-
 const commentForm = document.querySelector(".comments__form");
-
-const url = "https://project-1-api.herokuapp.com/comments";
+const url = "https://project-1-api.herokuapp.com/comments/";
 const apiKey = "?api_key=1feab7b3-5728-47cb-96ef-d4b70a38f4ed";
 
 function getComments(){
@@ -52,11 +12,40 @@ function getComments(){
          createComment(reviewsSection, data);
         }).catch((error) => 
         { 
-          console.log(error.response.data.message); 
-        });;
+          if(error.response) { console.log(error.response.data.message);
+            } else{ console.log(error); }
+        });
 }
 
 getComments();
+
+function deleteComment(id){
+  axios
+  .delete(`${url}${id}${apiKey}`)
+  .then((response) => response.data)
+  .then((data) => {
+         console.log(data); 
+         getComments();
+        }).catch((error) => 
+        { 
+          if(error.response) { console.log(error.response.data.message);
+            } else{ console.log(error); }
+        });
+}
+
+function likeComment(id){
+  axios
+  .put(`${url}${id}/like${apiKey}`)
+  .then((response) => response.data)
+  .then((data) => {
+         console.log(data);
+         getComments();
+        }).catch((error) => 
+        { 
+          if(error.response) { console.log(error.response.data.message);
+            } else{ console.log(error); }
+        });
+}
 
 function createComment(reviewsSection, reviews) {
     reviewsSection.innerHTML = " ";
@@ -76,7 +65,7 @@ function createComment(reviewsSection, reviews) {
             
         // create a h3 with class "reviews__inside-first-para", set innerText and append in parent div//
         reviewInsideFirst.appendChild(createReviewElement("h3", "reviews__inside-first-para", review.name));
-        // create a 'p' with class "reviews__inside-first-para,reviews__inside-first-para--color",// 
+        // create a 'p' with class "reviews__inside-first-para,reviews__inside-first-para--color"// 
         // set innerText and append in parent div
                                                                                             // changeDateTimeFormat(review.date)
         reviewInsideFirst.appendChild(createReviewElement("p", "reviews__inside-first-para,reviews__inside-first-para--color", timeAgo(review.timestamp)));
@@ -87,6 +76,22 @@ function createComment(reviewsSection, reviews) {
         // create a h4 with class "reviews__inside-second-para", set innerText and append in parent div//
         reviewInsideSecond.appendChild(createReviewElement("h4", "reviews__inside-second-para", review.comment));
         //  and append in parent div//
+        let deleteIcon = createReviewElement("i", "fa,fa-trash,reviews__inside-second-delete", "");
+        deleteIcon.id = review.id;
+        deleteIcon.addEventListener("click", function (event) {
+          console.log(event.target.id);
+          deleteComment(event.target.id);
+        })
+        reviewInsideSecond.appendChild(deleteIcon);
+        let likeIcon = createReviewElement("i", review.likes === 0 ? "fa,fa-thumbs-up,reviews__inside-second-like" : "fa,fa-thumbs-up,reviews__inside-second-like,reviews__inside-second-likes",
+                                           review.likes === 0 ? " " : " " + review.likes);
+        likeIcon.id = review.id;
+        likeIcon.addEventListener("click", function(event){
+          console.log(event.target.id); 
+          likeComment(event.target.id);
+        });
+        reviewInsideSecond.appendChild(likeIcon);
+        
         reviewInside.appendChild(reviewInsideSecond);
     }
 } 
@@ -113,8 +118,8 @@ function createReviewElement(elementName, className, innerText){
 function getFormattedDate(date) {
   let day = date.getDate();
   let month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  const hours = date.getHours();
+  let year = date.getFullYear();
+  // const hours = date.getHours();
   let minutes = date.getMinutes();
 
   if (minutes < 10) {

@@ -1,15 +1,22 @@
-const shows = [
-    { "DATE": "Mon Dec 17 2018", "VENUE": "Ronald Lane",   "LOCATION" : "San Francisco, CA"},
-    { "DATE": "Tue Jul 18 2019", "VENUE": "Pier 3 East",   "LOCATION" : "San Francisco, CA"},
-    { "DATE": "Fri Jul 22 2019", "VENUE": "View Loungue",  "LOCATION" : "San Francisco, CA"},
-    { "DATE": "Sat Aug 12 2019", "VENUE": "Hyatt Agency",  "LOCATION" : "San Francisco, CA"},
-    { "DATE": "Fri Sep 05 2019", "VENUE": "Moscow Center", "LOCATION" : "San Francisco, CA"},
-    { "DATE": "Wed Aug 11 2019", "VENUE": "Pres Club",     "LOCATION" : "San Francisco, CA"},
-]
-
-
 // get shows section first
 const showsSection = document.querySelector(".shows");
+
+const url = "https://project-1-api.herokuapp.com/showdates";
+const apiKey = "?api_key=1feab7b3-5728-47cb-96ef-d4b70a38f4ed";
+
+function getShowDates(){
+  axios
+  .get(`${url}${apiKey}`)
+  .then((response) => response.data)
+  .then((data) => {
+         createShows(showsSection, data);
+        }).catch((error) => 
+        { 
+          console.log(error.response.data.message); 
+        });
+}
+
+getShowDates();
 
 function createShowElement(element, className, innerText){
     let elm = document.createElement(element);
@@ -25,43 +32,51 @@ function createShowElement(element, className, innerText){
     return elm;
 }
 
-
-function createShow(show, isOtherRow){
+function createShow(show, isFirstRow){
     // create a div, add class shows__ticket
     let showContainer = document.createElement("div");
     showContainer.classList.add("shows__ticket");
 
-        // for in loop on row
-        for(key in show){
-           // create a div, add class shows__ticket-block, append in tickets.
-           let keyContainer = document.createElement("div");
-           keyContainer.classList.add("shows__ticket-block");
+    let dateContainer = document.createElement("div");
+    dateContainer.classList.add("shows__ticket-block");
+    
+    let venueContainer = document.createElement("div");
+    venueContainer.classList.add("shows__ticket-block");
+    
+    let locationContainer = document.createElement("div");
+    locationContainer.classList.add("shows__ticket-block");
+    
+    //add date, venue and location label
+    let dateHeader = createShowElement("h4", "shows__ticket-property", "DATE");
+    let venueHeader = createShowElement("h4", "shows__ticket-property", "VENUE");
+    let locationHeader = createShowElement("h4", "shows__ticket-property", "LOCATION");
 
-                if(isOtherRow){
-                    // create elm h4, add class shows__ticket-property,shows__ticket-property--hide, append in block.
-                    keyContainer.appendChild(createShowElement("h4", "shows__ticket-property,shows__ticket-property--hide", key));
-                }else{
-                    // create elm h4, add class shows__ticket-property, append in block.
-                    keyContainer.appendChild(createShowElement("h4", "shows__ticket-property", key));
-                }               
+    if(!isFirstRow){
+        dateHeader.classList.add("shows__ticket-property--hide");
+        venueHeader.classList.add("shows__ticket-property--hide");
+        locationHeader.classList.add("shows__ticket-property--hide");
+    }
 
-                // if key = Date then create h3 else create p, add class shows__ticket-before, append in block.
-                if (key.toUpperCase() === "DATE") {
-                    keyContainer.appendChild(createShowElement("h3", "shows__ticket-before", show[key]));
-                } else{
-                    keyContainer.appendChild(createShowElement("p", "shows__ticket-before", show[key]));
-                }
-                showContainer.appendChild(keyContainer);
-        }
-           
-        if(isOtherRow){
-             // create a btn, add class shows__ticket-btn, append in ticket. 
-             showContainer.appendChild(createShowElement("button", "shows__ticket-btn", "BUY TICKETS"));
-        }else{
-            // create a btn, add class shows__ticket-btn,shows__ticket-btn--first, append in ticket.  
-            showContainer.appendChild(createShowElement("button", "shows__ticket-btn,shows__ticket-btn--first", "BUY TICKETS"));              
-        }
-        return showContainer;
+    dateContainer.appendChild(dateHeader);
+    venueContainer.appendChild(venueHeader);
+    locationContainer.appendChild(locationHeader);
+
+    dateContainer.appendChild(createShowElement("h3", "shows__ticket-before", show.date));
+    venueContainer.appendChild(createShowElement("p", "shows__ticket-before", show.place));
+    locationContainer.appendChild(createShowElement("p", "shows__ticket-before", show.location));
+
+    showContainer.appendChild(dateContainer);
+    showContainer.appendChild(venueContainer);
+    showContainer.appendChild(locationContainer);
+
+    // create a btn, add class shows__ticket-btn, append in ticket. 
+    let btn = createShowElement("button", "shows__ticket-btn", "BUY TICKETS");
+    if(isFirstRow){
+        btn.classList.add("shows__ticket-btn--first");
+    }
+    showContainer.appendChild(btn);
+
+    return showContainer;
 }
 
 function createShows(showsSection, shows){
@@ -69,20 +84,27 @@ function createShows(showsSection, shows){
     let container = document.createElement("div");
     container.classList.add("shows__tickets");
 
-    //for loop 
+    // for (let i = 0; i < shows.length; i++) {
+    //     let isFirstRow = false;
+    //     if(i === 0){
+    //         isFirstRow = true;
+    //     }else{
+    //         isFirstRow = false;
+    //     }
+    //     container.appendChild(createShow(shows[i], isFirstRow));
+    // }
+
     let i = 0;
     for(show of shows){
-        let isOtherRow = false;
+        let isFirstRow = false;
         if(i === 0){
-            isOtherRow = false;
+            isFirstRow = true;
         }else {
-            isOtherRow = true;
+            isFirstRow = false;
         }
-        container.appendChild(createShow(show, isOtherRow));
+        container.appendChild(createShow(show, isFirstRow));
         i++;
     }
 
     showsSection.appendChild(container);
 }
-
-createShows(showsSection, shows);

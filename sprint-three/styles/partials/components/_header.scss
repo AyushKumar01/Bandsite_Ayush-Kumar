@@ -2,34 +2,32 @@
 .header {
     @include mobileText;
     background-color: $lightBlack;
-    color: white;
+    color: $white;
     display: flex;
-    height: 80px;
+    height: 5rem;
     flex-direction: column;
     text-align: center;
     &__first {
-        margin-top: 16px;
+        margin-top: 1rem;
     }
 
     &__list {
         display: flex;
         justify-content: space-around;
-        line-height: 35px;
+        line-height: 2.187rem;
     }
 
     &__list-element {
         width: 50%;
         &:active {
-            border-bottom: 5px solid white;
+            border-bottom: 0.312rem solid $white;
         }
         &:hover {
             background-color: $brightBlack;
-            cursor: pointer;
         }
-        // }
         
         &--active{
-            border-bottom: 5px solid white;
+            border-bottom: 0.312rem solid $white;
         }
       
     }
@@ -41,20 +39,20 @@
         flex-direction: row;
         align-items: center;
         &__first {
-            margin: 0 24px;
+            margin: 0 1.5rem;
         }
 
         &__second {
-            padding-top: 10px;
+            padding-top: 0.625rem;
         }
 
             
         &__list {
-            line-height: 75px;
+            line-height: 4.687rem;
             &-element {
                 width: auto;
-                padding: 0px 5px;
-                margin: 0 20px 10px;
+                padding: 0 0.312rem;
+                margin: 0 1.25rem 0.625rem;
             }
         }
 
@@ -62,14 +60,14 @@
 
     @include desktop {
         &__first {
-            margin: 0 0 0 180px;
+            margin: 0 0 0 12.5vw;
         }
 
         &__list {
-            line-height: 75px;
+            line-height: 4.687rem;
 
             &-element {
-                margin:0 0 10px 56px;
+                margin: 0 0 0.625rem 3.5rem;
     
             }
 
