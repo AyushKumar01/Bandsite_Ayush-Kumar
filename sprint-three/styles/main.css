@@ -54,6 +54,32 @@ a {
   font-display: swap;
 }
 
+@-webkit-keyframes slide-fade {
+  from {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-fade {
+  from {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .header {
   background-color: #323232;
   color: #ffffff;
@@ -180,6 +206,10 @@ a {
   }
 }
 
+.hero {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .hero__image {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url(../assets/concert-1.jpg);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../assets/concert-1.jpg);
@@ -188,7 +218,6 @@ a {
   background-size: cover;
   background-position: top center;
   height: 30vh;
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,16 +231,17 @@ a {
   margin: 0;
   width: 250px;
   margin-left: 1rem;
+  -webkit-animation: slide-fade 1s ease-in-out forwards;
+          animation: slide-fade 1s ease-in-out forwards;
 }
 
 @media screen and (min-width: 768px) {
-  .hero__image {
-    height: 400px;
-    width: 100vw;
-  }
-  .hero__image h1 {
+  .hero h1 {
     font-size: 3.75rem;
     line-height: 4.25rem;
+  }
+  .hero__image {
+    height: 400px;
   }
   .hero__image-heading {
     width: 500px;
@@ -220,16 +250,15 @@ a {
 }
 
 @media screen and (min-width: 1440px) {
-  .hero__image {
-    height: 670px;
-    width: 100%;
-  }
-  .hero__image h1 {
+  .hero h1 {
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
+  .hero__image {
+    height: 670px;
+  }
   .hero__image-heading {
-    min-width: 500px;
+    width: 500px;
     margin-left: 180px;
   }
 }
@@ -645,6 +674,9 @@ a {
   }
   .shows__ticket-property--hide {
     display: none;
+  }
+  .shows__ticket-before {
+    width: 80%;
   }
   .shows__ticket-btn {
     background-color: #000000;

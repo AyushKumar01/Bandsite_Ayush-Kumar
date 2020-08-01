@@ -97,6 +97,24 @@
       
   } 
 
+    
+  @keyframes slide-fade {
+    from {
+      transform: translateX(120%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+@mixin showsHideElm {
+  display: none;
+}
+
+
   // ================Grid-formula-for-gallery==================
 
 //   @mixin grid ($cols, $mgn) {
@@ -110,8 +128,4 @@
 //     }
     
 // }
-
-@mixin showsHideElm {
-  display: none;
-}
   
