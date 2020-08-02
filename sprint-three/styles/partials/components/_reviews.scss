@@ -51,9 +51,10 @@
     &__inside-second-delete {
         color: $brightBlack;
         cursor: pointer;
-        // float: right;
+        transition-duration: 0.4s;
         &:hover {
             color: black;
+            box-shadow: 0 30px 16px 0 rgba(0,0,0,0.24);
         }
     }
     
@@ -62,10 +63,11 @@
        margin-left: 0.5rem;
        margin-bottom: .5rem;
        cursor: pointer;
+       transition-duration: 0.4s;
        &:hover {
         color: rgb(77, 77, 243);
+        box-shadow: 0 30px 16px 0 rgba(0,0,255,0.24);
        }
-    //    float: right; 
     }
 
     &__inside-second-likes{
