@@ -90,21 +90,20 @@
 
         &__two {
             display: flex;
-            justify-content: flex-start;
-            
-            &-left {
-              @include footerTwoMrg;
-             
-            }
-
-            &-mid {
-                @include footerTwoMrg;
-            }
-
-            &-right {
-                @include footerTwoMrg;
-            }
+            justify-content: flex-start;         
+        }
+  
+        &__two-left {
+            @include footerTwoMrg;
            
+          }
+
+        &__two-mid {
+            @include footerTwoMrg;
+        }
+
+        &__two-right {
+            @include footerTwoMrg;
         }
 
         &__three {

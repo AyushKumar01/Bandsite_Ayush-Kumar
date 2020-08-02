@@ -1,51 +1,51 @@
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) {
-      @content;
-    }
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
   }
+}
   
-  @mixin desktop {
-    @media screen and (min-width: $desktop-breakpoint) {
-      @content;
-    }
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
   }
-  
-  @mixin mobileText {
-      h1 {
-          font-size: 1.5rem;
-          line-height: 2rem;
-      }
-      
-      h2 {
-          font-size: 0.875rem;
-          line-height: 1.375rem;
-      }
-      
-      h4 {
-          font-size: 0.812rem;
-          line-height: 1.125rem;
-      }
+}
 
-      p {
-        font-size: 0.812rem;
-        line-height: 1.125rem;
-      }
-      
-      h5 {
-          font-size: 0.75rem;
-          line-height: 1.25rem;
-      }
-  }
-
-  @mixin tabletText {
+@mixin mobileText {
     h1 {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
     
     h2 {
-        font-size: 1.5rem;
-        line-height: 2rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+    
+    h4 {
+      font-size: 0.812rem;
+      line-height: 1.125rem;
+    }
+
+    p {
+      font-size: 0.812rem;
+      line-height: 1.125rem;
+    }
+    
+    h5 {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+}
+
+@mixin tabletText {
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
 
     h3 {
@@ -54,78 +54,75 @@
     }
     
     h4 {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
     }
     
     h5 {
-        font-size: 0.75rem;
-        line-height: 1.25rem;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
 }
 
-  @mixin tabParaFont {
+@mixin tabParaFont {
     font-size: 0.875rem;
     line-height: 1.375rem;
+}
+
+@mixin tabContactFont {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+
+
+@mixin heroText {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
+  
+}
 
-  @mixin tabContactFont {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-  }
-
-
-
-  @mixin heroText {
-    h1 {
-      font-size: 3.75rem;
-      line-height: 4.25rem;
-    }
+@mixin footerTwoMrg {
+  padding-right: 5rem;
     
+  &--headings {
+      margin: 0 0 1.5rem 0;
   }
 
-  @mixin footerTwoMrg {
-      padding-right: 5rem;
-        
-      &--headings {
-          margin: 0 0 1.5rem 0;
-      }
-
-      &--para {
-        margin: 1.5rem 0 0 0;
-      }
-      
-  } 
+  &--para {
+    margin: 1.5rem 0 0 0;
+  }
+    
+} 
 
     
-  @keyframes slide-fade {
-    from {
-      transform: translateX(120%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+@keyframes slide-fade {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
   }
-
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 @mixin showsHideElm {
   display: none;
 }
 
 
-  // ================Grid-formula-for-gallery==================
+// ================Grid-formula-for-gallery==================
 
 //   @mixin grid ($cols, $mgn) {
 //     float: left;
 //     margin-right: $mgn;
 //     margin-bottom: $mgn;
 //     width: ((100% - (($cols - 1) * $mgn)) / $cols );
-
 //     &:nth-child(#{$cols}n) {
 //         margin-right: 0;
 //     }
-    
 // }
   

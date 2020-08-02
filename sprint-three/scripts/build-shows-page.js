@@ -80,19 +80,9 @@ function createShow(show, isFirstRow){
 }
 
 function createShows(showsSection, shows){
-    //create a div , add class shows__tickets, append in shows.
+    //create a div, add class shows__tickets, append in shows.
     let container = document.createElement("div");
     container.classList.add("shows__tickets");
-
-    // for (let i = 0; i < shows.length; i++) {
-    //     let isFirstRow = false;
-    //     if(i === 0){
-    //         isFirstRow = true;
-    //     }else{
-    //         isFirstRow = false;
-    //     }
-    //     container.appendChild(createShow(shows[i], isFirstRow));
-    // }
 
     let i = 0;
     for(show of shows){

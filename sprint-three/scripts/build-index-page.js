@@ -1,14 +1,17 @@
 const reviewsSection = document.querySelector(".reviews");
 const commentForm = document.querySelector(".comments__form");
-const url = "https://project-1-api.herokuapp.com/comments/";
+const url = "https://project-1-api.herokuapp.com/comments";
 const apiKey = "?api_key=1feab7b3-5728-47cb-96ef-d4b70a38f4ed";
+const headers = {
+  'Content-Type': 'application/json'
+} // used in post api.
 
 function getComments(){
   axios
   .get(`${url}${apiKey}`)
   .then((response) => response.data)
   .then((data) => {
-         console.log(data); 
+        //  console.log(data); 
          createComment(reviewsSection, data);
         }).catch((error) => 
         { 
@@ -21,10 +24,10 @@ getComments();
 
 function deleteComment(id){
   axios
-  .delete(`${url}${id}${apiKey}`)
+  .delete(`${url}/${id}${apiKey}`)
   .then((response) => response.data)
   .then((data) => {
-         console.log(data); 
+        //  console.log(data); 
          getComments();
         }).catch((error) => 
         { 
@@ -35,10 +38,10 @@ function deleteComment(id){
 
 function likeComment(id){
   axios
-  .put(`${url}${id}/like${apiKey}`)
+  .put(`${url}/${id}/like${apiKey}`)
   .then((response) => response.data)
   .then((data) => {
-         console.log(data);
+        //  console.log(data);
          getComments();
         }).catch((error) => 
         { 
@@ -108,11 +111,6 @@ function createReviewElement(elementName, className, innerText){
     }
     elm.innerText = innerText;
     return elm;
-
-    // let newElement = document.createElement(elementName);
-    // newElement.innerText = innerText;
-    // newElement.classList.add(className);
-    // return newElement;
 }
 
 function getFormattedDate(date) {
@@ -162,7 +160,6 @@ function timeAgo(dateParam) {
   const isYesterday = yesterday.toDateString() === date.toDateString();
   const isThisYear = today.getFullYear() === date.getFullYear();
 
-
   if (seconds < 5) {
     return 'now';
   } else if (seconds < 60) {
@@ -200,20 +197,14 @@ commentForm.addEventListener('submit', function(event) {
 
 function displayComment(comment){
     if(comment != null){
-        //reviews.push(comment);
-        axios.post(`${url}${apiKey}`, comment)
+        axios.post(`${url}${apiKey}`, comment, headers)
              .then((response) => response.data)
              .then((data) => {
-                 console.log(data);
+                //  console.log(data);
                  getComments(); 
       }).catch((error) => 
             { 
               console.log(error.response.data.message); 
             });
-
-        // createComment(reviewsSection, reviews);
-        //tried this at initial level then changed it to form reset in eventListener method
-        // event.target.reviewerName.value = "";
-        // event.target.reviewerComment.value = "";
     }
 }
