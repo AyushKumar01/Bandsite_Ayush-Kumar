@@ -891,7 +891,7 @@ a {
 }
 
 .reviews__image:hover {
-  background-color: black;
+  background-color: #000000;
 }
 
 .reviews__inside {
@@ -922,7 +922,7 @@ a {
 }
 
 .reviews__inside-first-para--color:hover {
-  color: black;
+  color: #000000;
 }
 
 .reviews__inside-second-para {
@@ -939,7 +939,7 @@ a {
 }
 
 .reviews__inside-second-delete:hover {
-  color: black;
+  color: #000000;
   -webkit-box-shadow: 0 30px 16px 0 rgba(0, 0, 0, 0.24);
           box-shadow: 0 30px 16px 0 rgba(0, 0, 0, 0.24);
 }
