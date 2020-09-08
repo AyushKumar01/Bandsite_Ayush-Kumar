@@ -90,7 +90,7 @@ function createComment(reviewsSection, reviews) {
                                            review.likes === 0 ? " " : " " + review.likes);
         likeIcon.id = review.id;
         likeIcon.addEventListener("click", function(event){
-          console.log(event.target.id); 
+          // console.log(event.target.id); 
           likeComment(event.target.id);
         });
         reviewInsideSecond.appendChild(likeIcon);
@@ -135,14 +135,6 @@ function getFormattedDate(date) {
 
   return `${ month }/${ day }/${ year }`;
 }
-
-//// this function was used earlier, later changed it with timeAgo function
-// function changeDateTimeFormat(dateToChangeFormat){
-//     const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: '2-digit', day: '2-digit' }) 
-//     const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(dateToChangeFormat); 
-//     // stack overflow for date formate change.
-//     return (`${month}/${day}/${year }`);
-// }
 
 //https://muffinman.io/javascript-time-ago-function/
 function timeAgo(dateParam) {
